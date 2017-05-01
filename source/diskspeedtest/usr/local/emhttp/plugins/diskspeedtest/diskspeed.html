@@ -1,0 +1,42 @@
+<!DOCTYPE html><html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Disk Speed Test</title><script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script><script type="text/javascript">$(function () {$('#graph1').highcharts({title:{text:'Disk Speed Test'},subtitle:{text:'By Position Percentile'},xAxis:{min:0,max:100,labels:{formatter:function(){return this.value+'%';}}},yAxis:{min:0,title:{text:'Speed/Sec'}},tooltip:{formatter:function(){return this.series.name+': '+this.y/1000000+'MB/sec at '+this.x+'%';}},legend:{enabled:true},plotOptions:{series:{marker:{enabled:false},animation:false,connectNulls:true}},series: [
+{name:'',data:[[0,191000000],[25,197000000],[50,169000000],[75,150000000],[100,100000000]]}
+,
+{name:'',data:[[0,162000000],[25,197000000],[50,124000000],[75,146000000],[100,102000000]]}
+,
+]});});$(function () {$('#graph2').highcharts({title:{text:'Disk Speed Test'},subtitle:{text:'By Drive Size'},xAxis:{min:0},yAxis:{min:0,title:{text:'Speed/Sec'}},tooltip:{formatter:function(){return this.series.name+': '+this.y/1000000+'MB/sec at '+this.x/1000000000+'GB';}},legend:{enabled:true},plotOptions:{series:{marker:{enabled:false},animation:false,connectNulls:true}},series: [{name:'',data:[[0,191000000],[750000000000,197000000],[1500000000000,169000000],[2250000000000,150000000],[3000000000000,100000000]]}
+,
+{name:'',data:[[0,162000000],[750000000000,197000000],[1500000000000,124000000],[2250000000000,146000000],[3000000000000,102000000]]}
+,
+{name:'sdc',data:[]}
+,
+{name:'sdm',data:[]}
+,
+]});});</script></head><body><style type="text/css">body,td {font-family:Arial,Helvetica,sans-serif;font-size:13px;color:black;}</style><script src="http://code.highcharts.com/highcharts.js"></script><script src="http://code.highcharts.com/modules/exporting.js"></script><div align="center"><table border=0 cellpadding=0 cellspacing=0><tr><td><div id="graph1" style="min-width: 310px; width: 1000px; height: 400px; margin: 0 auto;display:none"></div><div id="graph2" style="min-width: 310px; width: 1000px; height: 400px; margin: 0 auto"></div>
+<b>Drive Identification</b><br><table border=0 cellpadding=0 cellspacing=0>
+<tr><td>:&nbsp;</td><td>ST4000DM000-1F2168 Z3040V13&nbsp;&nbsp;</td><td align='right'>4 TB</td><td>&nbsp;&nbsp;<font color=grey>n/a</font></td></tr>
+<tr><td>:&nbsp;</td><td>ST3000DM001-1CH166 Z1F33KPN&nbsp;&nbsp;</td><td align='right'>3 TB</td><td>&nbsp;&nbsp;161&nbsp;MB/sec&nbsp;avg</td></tr>
+<tr><td>:&nbsp;</td><td>ST3000DM001-9YN166 W1F09TB6&nbsp;&nbsp;</td><td align='right'>3 TB</td><td>&nbsp;&nbsp;146&nbsp;MB/sec&nbsp;avg</td></tr>
+<tr><td>:&nbsp;</td><td>WDC WD30EZRX-00MMMB0 WD-WCAWZ1485466&nbsp;&nbsp;</td><td align='right'>3 TB</td><td>&nbsp;&nbsp;<font color=grey>n/a</font></td></tr>
+<tr><td>:&nbsp;</td><td>ST3000DM001-1CH166 W1F1NQHP&nbsp;&nbsp;</td><td align='right'>3 TB</td><td>&nbsp;&nbsp;<font color=grey>n/a</font></td></tr>
+<tr><td>:&nbsp;</td><td>ST3000DM008-2DM166 Z503GRSV&nbsp;&nbsp;</td><td align='right'>3 TB</td><td>&nbsp;&nbsp;<font color=grey>n/a</font></td></tr>
+<tr><td>:&nbsp;</td><td>ST4000DM000-1F2168 Z302BNB2&nbsp;&nbsp;</td><td align='right'>4 TB</td><td>&nbsp;&nbsp;<font color=grey>n/a</font></td></tr>
+<tr><td>:&nbsp;</td><td>ST3000DM001-1CH166 Z1F33M6R&nbsp;&nbsp;</td><td align='right'>3 TB</td><td>&nbsp;&nbsp;<font color=grey>n/a</font></td></tr>
+<tr><td>:&nbsp;</td><td>ST3000DM001-9YN166 Z1F186TB&nbsp;&nbsp;</td><td align='right'>3 TB</td><td>&nbsp;&nbsp;<font color=grey>n/a</font></td></tr>
+<tr><td>:&nbsp;</td><td>ST3000DM001-1ER166 Z500HGBE&nbsp;&nbsp;</td><td align='right'>3 TB</td><td>&nbsp;&nbsp;<font color=grey>n/a</font></td></tr>
+<tr><td>:&nbsp;</td><td>WDC WD30EZRX-00SPEB0 WD-WCC4E1598438&nbsp;&nbsp;</td><td align='right'>3 TB</td><td>&nbsp;&nbsp;<font color=grey>n/a</font></td></tr>
+<tr><td>sdb:&nbsp;</td><td>WDC WD30EZRX-00MMMB0 WD-WCAWZ1485466&nbsp;&nbsp;</td><td align='right'>3 TB</td><td>&nbsp;&nbsp;<font color=grey>n/a</font></td></tr>
+<tr><td>sdc:&nbsp;</td><td>ST3000DM001-9YN166 W1F09TB6&nbsp;&nbsp;</td><td align='right'>3 TB</td><td>&nbsp;&nbsp;146&nbsp;MB/sec&nbsp;avg</td></tr>
+<tr><td>sdd:&nbsp;</td><td>Corsair Force LE SSD 162180190001041603F5&nbsp;&nbsp;</td><td align='right'>240 GB</td><td>&nbsp;&nbsp;<font color=grey>n/a</font></td></tr>
+<tr><td>sde:&nbsp;</td><td>WDC WD30EZRX-00SPEB0 WD-WCC4E1598438&nbsp;&nbsp;</td><td align='right'>3 TB</td><td>&nbsp;&nbsp;<font color=grey>n/a</font></td></tr>
+<tr><td>sdf:&nbsp;</td><td>Corsair Force LE SSD 16418020000105670676&nbsp;&nbsp;</td><td align='right'>480 GB</td><td>&nbsp;&nbsp;<font color=grey>n/a</font></td></tr>
+<tr><td>sdg:&nbsp;</td><td>ST4000DM000-1F2168 Z3040V13&nbsp;&nbsp;</td><td align='right'>4 TB</td><td>&nbsp;&nbsp;<font color=grey>n/a</font></td></tr>
+<tr><td>sdh:&nbsp;</td><td>ST3000DM001-1CH166 W1F1NQHP&nbsp;&nbsp;</td><td align='right'>3 TB</td><td>&nbsp;&nbsp;<font color=grey>n/a</font></td></tr>
+<tr><td>sdi:&nbsp;</td><td>ST3000DM008-2DM166 Z503GRSV&nbsp;&nbsp;</td><td align='right'>3 TB</td><td>&nbsp;&nbsp;<font color=grey>n/a</font></td></tr>
+<tr><td>sdj:&nbsp;</td><td>ST3000DM001-1CH166 Z1F33M6R&nbsp;&nbsp;</td><td align='right'>3 TB</td><td>&nbsp;&nbsp;<font color=grey>n/a</font></td></tr>
+<tr><td>sdk:&nbsp;</td><td>ST3000DM001-1ER166 Z500HGBE&nbsp;&nbsp;</td><td align='right'>3 TB</td><td>&nbsp;&nbsp;<font color=grey>n/a</font></td></tr>
+<tr><td>sdl:&nbsp;</td><td>ST4000DM000-1F2168 Z302BNB2&nbsp;&nbsp;</td><td align='right'>4 TB</td><td>&nbsp;&nbsp;<font color=grey>n/a</font></td></tr>
+<tr><td>sdm:&nbsp;</td><td>ST3000DM001-1CH166 Z1F33KPN&nbsp;&nbsp;</td><td align='right'>3 TB</td><td>&nbsp;&nbsp;161&nbsp;MB/sec&nbsp;avg</td></tr>
+<tr><td>sdn:&nbsp;</td><td>ST3000DM001-9YN166 Z1F186TB&nbsp;&nbsp;</td><td align='right'>3 TB</td><td>&nbsp;&nbsp;<font color=grey>n/a</font></td></tr>
+</table><br/>Generated on <b>Server_A</b> at Sun Apr 30 20:51:50 EDT 2017<br/>
+Drives scanned 1 time every 25.0%
+</td></tr></table></div></body></html>

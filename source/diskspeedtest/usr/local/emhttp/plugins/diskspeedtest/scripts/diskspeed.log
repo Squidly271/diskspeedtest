@@ -1,0 +1,1637 @@
+ndNumDisabled: 
+mdNumInvalid: 1
+mdNumMissing: 0
+mdResyncDb: 
+sbNumDisks: 12
+mdResyncPos: 0
+UNRAID Drive extraction report
+parity (sdg) ID [ST4000DM000-1F2168_Z3040V13] Size [3907018532] Status [DISK_OK]
+disk1 (sdm) ID [ST3000DM001-1CH166_Z1F33KPN] Size [2930266532] Status [DISK_OK]
+disk2 (sdc) ID [ST3000DM001-9YN166_W1F09TB6] Size [2930266532] Status [DISK_OK]
+disk3 (sdb) ID [WDC_WD30EZRX-00MMMB0_WD-WCAWZ1485466] Size [2930266532] Status [DISK_OK]
+disk4 (sdh) ID [ST3000DM001-1CH166_W1F1NQHP] Size [2930266532] Status [DISK_OK]
+disk5 (sdi) ID [ST3000DM008-2DM166_Z503GRSV] Size [2930266532] Status [DISK_OK]
+disk6 (sdl) ID [ST4000DM000-1F2168_Z302BNB2] Size [3907018532] Status [DISK_OK]
+disk7 (sdj) ID [ST3000DM001-1CH166_Z1F33M6R] Size [2930266532] Status [DISK_OK]
+disk8 (sdn) ID [ST3000DM001-9YN166_Z1F186TB] Size [2930266532] Status [DISK_OK]
+disk9 (sdk) ID [ST3000DM001-1ER166_Z500HGBE] Size [2930266532] Status [DISK_OK]
+disk10 (sde) ID [WDC_WD30EZRX-00SPEB0_WD-WCC4E1598438] Size [2930266532] Status [DISK_OK]
+cache (sdf) ID [Corsair_Force_LE_SSD_16418020000105670676] Size [468851512] Status [DISK_OK]
+==========
+/tmp/inventory1.txt
+==========
+Disk /dev/loop0: 15 GiB, 16106127360 bytes, 31457280 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop1: 1 GiB, 1073741824 bytes, 2097152 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/sda: 7.2 GiB, 7756087296 bytes, 15148608 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x00000000
+
+Device     Boot Start      End  Sectors  Size Id Type
+/dev/sda1  *       63 15133229 15133167  7.2G  b W95 FAT32
+
+
+Disk /dev/sdb: 2.7 TiB, 3000592982016 bytes, 5860533168 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Disklabel type: gpt
+Disk identifier: 831C2815-0BC5-4D3A-8A1E-B2FA727FB2A4
+
+Device     Start        End    Sectors  Size Type
+/dev/sdb1     64 5860533134 5860533071  2.7T Linux filesystem
+
+
+Disk /dev/sdc: 2.7 TiB, 3000592982016 bytes, 5860533168 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Disklabel type: gpt
+Disk identifier: 72078A05-156D-4268-9FE1-7D16FD245946
+
+Device     Start        End    Sectors  Size Type
+/dev/sdc1     64 5860533134 5860533071  2.7T Linux filesystem
+
+
+Disk /dev/sdd: 223.6 GiB, 240057409536 bytes, 468862128 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x00000000
+
+Device     Boot Start       End   Sectors   Size Id Type
+/dev/sdd1          64 468862127 468862064 223.6G 83 Linux
+
+
+Disk /dev/sde: 2.7 TiB, 3000592982016 bytes, 5860533168 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Disklabel type: gpt
+Disk identifier: B7DA1D66-C63D-4E74-A323-4BF84C498DF5
+
+Device     Start        End    Sectors  Size Type
+/dev/sde1     64 5860533134 5860533071  2.7T Linux filesystem
+
+
+Disk /dev/sdf: 447.1 GiB, 480103981056 bytes, 937703088 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x00000000
+
+Device     Boot Start       End   Sectors   Size Id Type
+/dev/sdf1          64 937703087 937703024 447.1G 83 Linux
+
+
+Disk /dev/sdg: 3.7 TiB, 4000787030016 bytes, 7814037168 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Disklabel type: gpt
+Disk identifier: 1B7F81E8-32EC-4A44-AAC9-4AEAFD200182
+
+Device     Start        End    Sectors  Size Type
+/dev/sdg1     64 7814037134 7814037071  3.7T Linux filesystem
+
+
+Disk /dev/sdh: 2.7 TiB, 3000592982016 bytes, 5860533168 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Disklabel type: gpt
+Disk identifier: 73AAB7DC-E68A-49EC-9E03-0FE760F41B2F
+
+Device     Start        End    Sectors  Size Type
+/dev/sdh1     64 5860533134 5860533071  2.7T Linux filesystem
+
+
+Disk /dev/sdi: 2.7 TiB, 3000592982016 bytes, 5860533168 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Disklabel type: gpt
+Disk identifier: F66C58F4-216E-4170-AA36-342CF6FC7343
+
+Device     Start        End    Sectors  Size Type
+/dev/sdi1     64 5860533134 5860533071  2.7T Linux filesystem
+
+
+Disk /dev/sdj: 2.7 TiB, 3000592982016 bytes, 5860533168 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Disklabel type: gpt
+Disk identifier: 7A229FF7-0146-4AC5-9682-225915D5DCC4
+
+Device     Start        End    Sectors  Size Type
+/dev/sdj1     64 5860533134 5860533071  2.7T Linux filesystem
+
+
+Disk /dev/sdk: 2.7 TiB, 3000592982016 bytes, 5860533168 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Disklabel type: gpt
+Disk identifier: 45539B9F-AC64-4245-AC45-8312BF1DAC55
+
+Device     Start        End    Sectors  Size Type
+/dev/sdk1     64 5860533134 5860533071  2.7T Linux filesystem
+
+
+Disk /dev/sdl: 3.7 TiB, 4000787030016 bytes, 7814037168 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Disklabel type: gpt
+Disk identifier: 810DFD3C-CFA0-4180-9917-E0195C0A04E4
+
+Device     Start        End    Sectors  Size Type
+/dev/sdl1     64 7814037134 7814037071  3.7T Linux filesystem
+
+
+Disk /dev/sdm: 2.7 TiB, 3000592982016 bytes, 5860533168 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Disklabel type: gpt
+Disk identifier: 7BEE00A8-04A7-4137-906C-1E23ACB50972
+
+Device     Start        End    Sectors  Size Type
+/dev/sdm1     64 5860533134 5860533071  2.7T Linux filesystem
+
+
+Disk /dev/sdn: 2.7 TiB, 3000592982016 bytes, 5860533168 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Disklabel type: gpt
+Disk identifier: 330FAADD-F5CB-479F-AFFB-369F64BD3618
+
+Device     Start        End    Sectors  Size Type
+/dev/sdn1     64 5860533134 5860533071  2.7T Linux filesystem
+
+
+Disk /dev/md1: 2.7 TiB, 3000592928768 bytes, 5860533064 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/md2: 2.7 TiB, 3000592928768 bytes, 5860533064 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/md3: 2.7 TiB, 3000592928768 bytes, 5860533064 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/md4: 2.7 TiB, 3000592928768 bytes, 5860533064 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/md5: 2.7 TiB, 3000592928768 bytes, 5860533064 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/md6: 3.7 TiB, 4000786976768 bytes, 7814037064 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/md7: 2.7 TiB, 3000592928768 bytes, 5860533064 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/md8: 2.7 TiB, 3000592928768 bytes, 5860533064 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/md9: 2.7 TiB, 3000592928768 bytes, 5860533064 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/md10: 2.7 TiB, 3000592928768 bytes, 5860533064 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+==========
+Current Unraid slot: Disk 3 - /dev/sdb
+/tmp/diskspeed.tmp
+==========
+
+/dev/sdb:
+
+ATA device, with non-removable media
+	Model Number:       WDC WD30EZRX-00MMMB0                    
+	Serial Number:      WD-WCAWZ1485466
+	Firmware Revision:  80.00A80
+	Transport:          Serial, SATA 1.0a, SATA II Extensions, SATA Rev 2.5, SATA Rev 2.6, SATA Rev 3.0
+Standards:
+	Supported: 8 7 6 5 
+	Likely used: 8
+Configuration:
+	Logical		max	current
+	cylinders	16383	16383
+	heads		16	16
+	sectors/track	63	63
+	--
+	CHS current addressable sectors:   16514064
+	LBA    user addressable sectors:  268435455
+	LBA48  user addressable sectors: 5860533168
+	Logical  Sector size:                   512 bytes
+	Physical Sector size:                  4096 bytes
+	Logical Sector-0 offset:                  0 bytes
+	device size with M = 1024*1024:     2861588 MBytes
+	device size with M = 1000*1000:     3000592 MBytes (3000 GB)
+	cache/buffer size  = unknown
+Capabilities:
+	LBA, IORDY(can be disabled)
+	Queue depth: 32
+	Standby timer values: spec'd by Standard, with device specific minimum
+	R/W multiple sector transfer: Max = 16	Current = 16
+	DMA: mdma0 mdma1 mdma2 udma0 udma1 udma2 udma3 udma4 udma5 *udma6 
+	     Cycle time: min=120ns recommended=120ns
+	PIO: pio0 pio1 pio2 pio3 pio4 
+	     Cycle time: no flow control=120ns  IORDY flow control=120ns
+Commands/features:
+	Enabled	Supported:
+	   *	SMART feature set
+	    	Security Mode feature set
+	   *	Power Management feature set
+	   *	Write cache
+	   *	Look-ahead
+	   *	Host Protected Area feature set
+	   *	WRITE_BUFFER command
+	   *	READ_BUFFER command
+	   *	NOP cmd
+	   *	DOWNLOAD_MICROCODE
+	    	Power-Up In Standby feature set
+	   *	SET_FEATURES required to spinup after power up
+	    	SET_MAX security extension
+	   *	48-bit Address feature set
+	   *	Device Configuration Overlay feature set
+	   *	Mandatory FLUSH_CACHE
+	   *	FLUSH_CACHE_EXT
+	   *	SMART error logging
+	   *	SMART self-test
+	   *	General Purpose Logging feature set
+	   *	64-bit World wide name
+	   *	{READ,WRITE}_DMA_EXT_GPL commands
+	   *	Segmented DOWNLOAD_MICROCODE
+	   *	Gen1 signaling speed (1.5Gb/s)
+	   *	Gen2 signaling speed (3.0Gb/s)
+	   *	Gen3 signaling speed (6.0Gb/s)
+	   *	Native Command Queueing (NCQ)
+	   *	Host-initiated interface power management
+	   *	Phy event counters
+	   *	NCQ priority information
+	   *	DMA Setup Auto-Activate optimization
+	   *	Software settings preservation
+	   *	SMART Command Transport (SCT) feature set
+	   *	SCT Write Same (AC2)
+	   *	SCT Features Control (AC4)
+	   *	SCT Data Tables (AC5)
+	    	unknown 206[12] (vendor specific)
+	    	unknown 206[13] (vendor specific)
+Security: 
+	Master password revision code = 65534
+		supported
+	not	enabled
+	not	locked
+		frozen
+	not	expired: security count
+		supported: enhanced erase
+	more than 508min for SECURITY ERASE UNIT. more than 508min for ENHANCED SECURITY ERASE UNIT. 
+Logical Unit WWN Device Identifier: 50014ee25ba23255
+	NAA		: 5
+	IEEE OUI	: 0014ee
+	Unique ID	: 25ba23255
+Checksum: correct
+==========
+Model: [WDC WD30EZRX-00MMMB0]
+Serial: [WD-WCAWZ1485466]
+GB: []
+Drive skipped
+Current Unraid slot: Disk 2 - /dev/sdc
+/tmp/diskspeed.tmp
+==========
+
+/dev/sdc:
+
+ATA device, with non-removable media
+	Model Number:       ST3000DM001-9YN166                      
+	Serial Number:      W1F09TB6
+	Firmware Revision:  CC4C    
+	Transport:          Serial, SATA Rev 3.0
+Standards:
+	Used: unknown (minor revision code 0x0029) 
+	Supported: 8 7 6 5 
+	Likely used: 8
+Configuration:
+	Logical		max	current
+	cylinders	16383	16383
+	heads		16	16
+	sectors/track	63	63
+	--
+	CHS current addressable sectors:   16514064
+	LBA    user addressable sectors:  268435455
+	LBA48  user addressable sectors: 5860533168
+	Logical  Sector size:                   512 bytes
+	Physical Sector size:                  4096 bytes
+	Logical Sector-0 offset:                  0 bytes
+	device size with M = 1024*1024:     2861588 MBytes
+	device size with M = 1000*1000:     3000592 MBytes (3000 GB)
+	cache/buffer size  = unknown
+	Nominal Media Rotation Rate: 7200
+Capabilities:
+	LBA, IORDY(can be disabled)
+	Queue depth: 32
+	Standby timer values: spec'd by Standard, no device specific minimum
+	R/W multiple sector transfer: Max = 16	Current = 16
+	Advanced power management level: 128
+	Recommended acoustic management value: 208, current value: 0
+	DMA: mdma0 mdma1 mdma2 udma0 udma1 udma2 udma3 udma4 udma5 *udma6 
+	     Cycle time: min=120ns recommended=120ns
+	PIO: pio0 pio1 pio2 pio3 pio4 
+	     Cycle time: no flow control=120ns  IORDY flow control=120ns
+Commands/features:
+	Enabled	Supported:
+	   *	SMART feature set
+	    	Security Mode feature set
+	   *	Power Management feature set
+	   *	Write cache
+	   *	Look-ahead
+	   *	Host Protected Area feature set
+	   *	WRITE_BUFFER command
+	   *	READ_BUFFER command
+	   *	DOWNLOAD_MICROCODE
+	   *	Advanced Power Management feature set
+	    	SET_MAX security extension
+	   *	48-bit Address feature set
+	   *	Device Configuration Overlay feature set
+	   *	Mandatory FLUSH_CACHE
+	   *	FLUSH_CACHE_EXT
+	   *	SMART error logging
+	   *	SMART self-test
+	   *	General Purpose Logging feature set
+	   *	WRITE_{DMA|MULTIPLE}_FUA_EXT
+	   *	64-bit World wide name
+	    	Write-Read-Verify feature set
+	   *	WRITE_UNCORRECTABLE_EXT command
+	   *	{READ,WRITE}_DMA_EXT_GPL commands
+	   *	Segmented DOWNLOAD_MICROCODE
+	   *	Gen1 signaling speed (1.5Gb/s)
+	   *	Gen2 signaling speed (3.0Gb/s)
+	   *	Gen3 signaling speed (6.0Gb/s)
+	   *	Native Command Queueing (NCQ)
+	   *	Phy event counters
+	   *	READ_LOG_DMA_EXT equivalent to READ_LOG_EXT
+	   *	DMA Setup Auto-Activate optimization
+	    	Device-initiated interface power management
+	   *	Software settings preservation
+	   *	SMART Command Transport (SCT) feature set
+	   *	SCT Write Same (AC2)
+	    	unknown 206[7]
+	    	unknown 206[12] (vendor specific)
+	    	unknown 206[13] (vendor specific)
+Security: 
+	Master password revision code = 65534
+		supported
+	not	enabled
+	not	locked
+		frozen
+	not	expired: security count
+		supported: enhanced erase
+	328min for SECURITY ERASE UNIT. 328min for ENHANCED SECURITY ERASE UNIT. 
+Logical Unit WWN Device Identifier: 5000c50045614e13
+	NAA		: 5
+	IEEE OUI	: 000c50
+	Unique ID	: 045614e13
+Checksum: correct
+==========
+Model: [ST3000DM001-9YN166]
+Serial: [W1F09TB6]
+GB: []
+Drive skipped
+Current Unraid slot:  - /dev/sdd
+/tmp/diskspeed.tmp
+==========
+
+/dev/sdd:
+
+ATA device, with non-removable media
+	Model Number:       Corsair Force LE SSD                    
+	Serial Number:      162180190001041603F5
+	Firmware Revision:  SAFC12.2
+	Transport:          Serial, ATA8-AST, SATA 1.0a, SATA II Extensions, SATA Rev 2.5, SATA Rev 2.6, SATA Rev 3.0
+Standards:
+	Supported: 9 8 7 6 5 
+	Likely used: 9
+Configuration:
+	Logical		max	current
+	cylinders	16383	16383
+	heads		16	16
+	sectors/track	63	63
+	--
+	CHS current addressable sectors:   16514064
+	LBA    user addressable sectors:  268435455
+	LBA48  user addressable sectors:  468862128
+	Logical  Sector size:                   512 bytes
+	Physical Sector size:                   512 bytes
+	Logical Sector-0 offset:                  0 bytes
+	device size with M = 1024*1024:      228936 MBytes
+	device size with M = 1000*1000:      240057 MBytes (240 GB)
+	cache/buffer size  = unknown
+	Form Factor: 2.5 inch
+	Nominal Media Rotation Rate: Solid State Device
+Capabilities:
+	LBA, IORDY(can be disabled)
+	Queue depth: 32
+	Standby timer values: spec'd by Standard, no device specific minimum
+	R/W multiple sector transfer: Max = 16	Current = 16
+	Advanced power management level: 254
+	DMA: mdma0 mdma1 mdma2 udma0 udma1 udma2 udma3 udma4 udma5 *udma6 
+	     Cycle time: min=120ns recommended=120ns
+	PIO: pio0 pio1 pio2 pio3 pio4 
+	     Cycle time: no flow control=120ns  IORDY flow control=120ns
+Commands/features:
+	Enabled	Supported:
+	   *	SMART feature set
+	    	Security Mode feature set
+	   *	Power Management feature set
+	   *	Write cache
+	   *	Look-ahead
+	   *	Host Protected Area feature set
+	   *	WRITE_BUFFER command
+	   *	READ_BUFFER command
+	   *	NOP cmd
+	   *	DOWNLOAD_MICROCODE
+	   *	Advanced Power Management feature set
+	    	SET_MAX security extension
+	   *	48-bit Address feature set
+	   *	Device Configuration Overlay feature set
+	   *	Mandatory FLUSH_CACHE
+	   *	FLUSH_CACHE_EXT
+	   *	SMART error logging
+	   *	SMART self-test
+	   *	General Purpose Logging feature set
+	   *	WRITE_{DMA|MULTIPLE}_FUA_EXT
+	   *	Disable Data Transfer After Error Detection
+	   *	{READ,WRITE}_DMA_EXT_GPL commands
+	   *	Segmented DOWNLOAD_MICROCODE
+	   *	Gen1 signaling speed (1.5Gb/s)
+	   *	Gen2 signaling speed (3.0Gb/s)
+	   *	Gen3 signaling speed (6.0Gb/s)
+	   *	Native Command Queueing (NCQ)
+	   *	Host-initiated interface power management
+	   *	Phy event counters
+	   *	Host automatic Partial to Slumber transitions
+	   *	Device automatic Partial to Slumber transitions
+	   *	READ_LOG_DMA_EXT equivalent to READ_LOG_EXT
+	   *	DMA Setup Auto-Activate optimization
+	    	Device-initiated interface power management
+	   *	Software settings preservation
+	   *	DOWNLOAD MICROCODE DMA command
+	   *	SET MAX SETPASSWORD/UNLOCK DMA commands
+	   *	WRITE BUFFER DMA command
+	   *	READ BUFFER DMA command
+	   *	DEVICE CONFIGURATION SET/IDENTIFY DMA commands
+	   *	Data Set Management TRIM supported (limit 8 blocks)
+	   *	Deterministic read ZEROs after TRIM
+Security: 
+	Master password revision code = 65534
+		supported
+	not	enabled
+	not	locked
+		frozen
+	not	expired: security count
+		supported: enhanced erase
+	2min for SECURITY ERASE UNIT. 2min for ENHANCED SECURITY ERASE UNIT. 
+Checksum: correct
+==========
+Model: [Corsair Force LE SSD]
+Serial: [162180190001041603F5]
+GB: []
+Drive skipped
+Current Unraid slot: Disk 10 - /dev/sde
+/tmp/diskspeed.tmp
+==========
+
+/dev/sde:
+
+ATA device, with non-removable media
+	Model Number:       WDC WD30EZRX-00SPEB0                    
+	Serial Number:      WD-WCC4E1598438
+	Firmware Revision:  80.00A80
+	Transport:          Serial, SATA 1.0a, SATA II Extensions, SATA Rev 2.5, SATA Rev 2.6, SATA Rev 3.0
+Standards:
+	Supported: 9 8 7 6 5 
+	Likely used: 9
+Configuration:
+	Logical		max	current
+	cylinders	16383	16383
+	heads		16	16
+	sectors/track	63	63
+	--
+	CHS current addressable sectors:   16514064
+	LBA    user addressable sectors:  268435455
+	LBA48  user addressable sectors: 5860533168
+	Logical  Sector size:                   512 bytes
+	Physical Sector size:                  4096 bytes
+	device size with M = 1024*1024:     2861588 MBytes
+	device size with M = 1000*1000:     3000592 MBytes (3000 GB)
+	cache/buffer size  = unknown
+	Nominal Media Rotation Rate: 5400
+Capabilities:
+	LBA, IORDY(can be disabled)
+	Queue depth: 32
+	Standby timer values: spec'd by Standard, with device specific minimum
+	R/W multiple sector transfer: Max = 16	Current = 16
+	DMA: mdma0 mdma1 mdma2 udma0 udma1 udma2 udma3 udma4 udma5 *udma6 
+	     Cycle time: min=120ns recommended=120ns
+	PIO: pio0 pio1 pio2 pio3 pio4 
+	     Cycle time: no flow control=120ns  IORDY flow control=120ns
+Commands/features:
+	Enabled	Supported:
+	   *	SMART feature set
+	    	Security Mode feature set
+	   *	Power Management feature set
+	   *	Write cache
+	   *	Look-ahead
+	   *	Host Protected Area feature set
+	   *	WRITE_BUFFER command
+	   *	READ_BUFFER command
+	   *	NOP cmd
+	   *	DOWNLOAD_MICROCODE
+	    	Power-Up In Standby feature set
+	   *	SET_FEATURES required to spinup after power up
+	    	SET_MAX security extension
+	   *	48-bit Address feature set
+	   *	Device Configuration Overlay feature set
+	   *	Mandatory FLUSH_CACHE
+	   *	FLUSH_CACHE_EXT
+	   *	SMART error logging
+	   *	SMART self-test
+	   *	General Purpose Logging feature set
+	   *	64-bit World wide name
+	   *	WRITE_UNCORRECTABLE_EXT command
+	   *	{READ,WRITE}_DMA_EXT_GPL commands
+	   *	Segmented DOWNLOAD_MICROCODE
+	   *	Gen1 signaling speed (1.5Gb/s)
+	   *	Gen2 signaling speed (3.0Gb/s)
+	   *	Gen3 signaling speed (6.0Gb/s)
+	   *	Native Command Queueing (NCQ)
+	   *	Host-initiated interface power management
+	   *	Phy event counters
+	   *	NCQ priority information
+	   *	READ_LOG_DMA_EXT equivalent to READ_LOG_EXT
+	   *	DMA Setup Auto-Activate optimization
+	    	Device-initiated interface power management
+	   *	Software settings preservation
+	   *	SMART Command Transport (SCT) feature set
+	   *	SCT Write Same (AC2)
+	   *	SCT Features Control (AC4)
+	   *	SCT Data Tables (AC5)
+	    	unknown 206[12] (vendor specific)
+	    	unknown 206[13] (vendor specific)
+	    	unknown 206[14] (vendor specific)
+Security: 
+	Master password revision code = 65534
+		supported
+	not	enabled
+	not	locked
+		frozen
+	not	expired: security count
+		supported: enhanced erase
+	408min for SECURITY ERASE UNIT. 408min for ENHANCED SECURITY ERASE UNIT. 
+Logical Unit WWN Device Identifier: 50014ee20a17823e
+	NAA		: 5
+	IEEE OUI	: 0014ee
+	Unique ID	: 20a17823e
+Checksum: correct
+==========
+Model: [WDC WD30EZRX-00SPEB0]
+Serial: [WD-WCC4E1598438]
+GB: []
+Drive skipped
+Current Unraid slot: Cache - /dev/sdf
+/tmp/diskspeed.tmp
+==========
+
+/dev/sdf:
+
+ATA device, with non-removable media
+	Model Number:       Corsair Force LE SSD                    
+	Serial Number:      16418020000105670676
+	Firmware Revision:  SAFC12.2
+	Transport:          Serial, ATA8-AST, SATA 1.0a, SATA II Extensions, SATA Rev 2.5, SATA Rev 2.6, SATA Rev 3.0
+Standards:
+	Supported: 9 8 7 6 5 
+	Likely used: 9
+Configuration:
+	Logical		max	current
+	cylinders	16383	16383
+	heads		16	16
+	sectors/track	63	63
+	--
+	CHS current addressable sectors:   16514064
+	LBA    user addressable sectors:  268435455
+	LBA48  user addressable sectors:  937703088
+	Logical  Sector size:                   512 bytes
+	Physical Sector size:                   512 bytes
+	Logical Sector-0 offset:                  0 bytes
+	device size with M = 1024*1024:      457862 MBytes
+	device size with M = 1000*1000:      480103 MBytes (480 GB)
+	cache/buffer size  = unknown
+	Form Factor: 2.5 inch
+	Nominal Media Rotation Rate: Solid State Device
+Capabilities:
+	LBA, IORDY(can be disabled)
+	Queue depth: 32
+	Standby timer values: spec'd by Standard, no device specific minimum
+	R/W multiple sector transfer: Max = 16	Current = 16
+	Advanced power management level: 254
+	DMA: mdma0 mdma1 mdma2 udma0 udma1 udma2 udma3 udma4 udma5 *udma6 
+	     Cycle time: min=120ns recommended=120ns
+	PIO: pio0 pio1 pio2 pio3 pio4 
+	     Cycle time: no flow control=120ns  IORDY flow control=120ns
+Commands/features:
+	Enabled	Supported:
+	   *	SMART feature set
+	    	Security Mode feature set
+	   *	Power Management feature set
+	   *	Write cache
+	   *	Look-ahead
+	   *	Host Protected Area feature set
+	   *	WRITE_BUFFER command
+	   *	READ_BUFFER command
+	   *	NOP cmd
+	   *	DOWNLOAD_MICROCODE
+	   *	Advanced Power Management feature set
+	    	SET_MAX security extension
+	   *	48-bit Address feature set
+	   *	Device Configuration Overlay feature set
+	   *	Mandatory FLUSH_CACHE
+	   *	FLUSH_CACHE_EXT
+	   *	SMART error logging
+	   *	SMART self-test
+	   *	General Purpose Logging feature set
+	   *	WRITE_{DMA|MULTIPLE}_FUA_EXT
+	   *	Disable Data Transfer After Error Detection
+	   *	{READ,WRITE}_DMA_EXT_GPL commands
+	   *	Segmented DOWNLOAD_MICROCODE
+	   *	Gen1 signaling speed (1.5Gb/s)
+	   *	Gen2 signaling speed (3.0Gb/s)
+	   *	Gen3 signaling speed (6.0Gb/s)
+	   *	Native Command Queueing (NCQ)
+	   *	Host-initiated interface power management
+	   *	Phy event counters
+	   *	Host automatic Partial to Slumber transitions
+	   *	Device automatic Partial to Slumber transitions
+	   *	READ_LOG_DMA_EXT equivalent to READ_LOG_EXT
+	   *	DMA Setup Auto-Activate optimization
+	    	Device-initiated interface power management
+	   *	Software settings preservation
+	   *	DOWNLOAD MICROCODE DMA command
+	   *	SET MAX SETPASSWORD/UNLOCK DMA commands
+	   *	WRITE BUFFER DMA command
+	   *	READ BUFFER DMA command
+	   *	DEVICE CONFIGURATION SET/IDENTIFY DMA commands
+	   *	Data Set Management TRIM supported (limit 8 blocks)
+	   *	Deterministic read ZEROs after TRIM
+Security: 
+	Master password revision code = 65534
+		supported
+	not	enabled
+	not	locked
+		frozen
+	not	expired: security count
+		supported: enhanced erase
+	2min for SECURITY ERASE UNIT. 2min for ENHANCED SECURITY ERASE UNIT. 
+Checksum: correct
+==========
+Model: [Corsair Force LE SSD]
+Serial: [16418020000105670676]
+GB: []
+startpos: [0]
+startposdisp: [0]
+CurrPer: [0]
+Performance testing /dev/sdf (Cache) at 0 GB (0%)  0
+dd if=/dev/sdf of=/dev/null bs=1GB count=1 skip=0 iflag=direct
+/tmp/diskspeed_results.txt
+==========
+1+0 records in
+1+0 records out
+1000000000 bytes (1.0 GB, 954 MiB) copied, 1.84121 s, 543 MB/s
+==========
+ratedspeed: [543000000]
+startpos: [120]
+startposdisp: [120]
+CurrPer: [25]
+Performance testing /dev/sdf (Cache) at 120 GB (25%)  120
+dd if=/dev/sdf of=/dev/null bs=1GB count=1 skip=120 iflag=direct
+/tmp/diskspeed_results.txt
+==========
+1+0 records in
+1+0 records out
+1000000000 bytes (1.0 GB, 954 MiB) copied, 1.84629 s, 542 MB/s
+==========
+ratedspeed: [542000000]
+startpos: [240]
+startposdisp: [240]
+CurrPer: [50]
+Performance testing /dev/sdf (Cache) at 240 GB (50%)  240
+dd if=/dev/sdf of=/dev/null bs=1GB count=1 skip=240 iflag=direct
+/tmp/diskspeed_results.txt
+==========
+1+0 records in
+1+0 records out
+1000000000 bytes (1.0 GB, 954 MiB) copied, 1.96098 s, 510 MB/s
+==========
+ratedspeed: [510000000]
+startpos: [360]
+startposdisp: [360]
+CurrPer: [75]
+Performance testing /dev/sdf (Cache) at 360 GB (75%)  360
+dd if=/dev/sdf of=/dev/null bs=1GB count=1 skip=360 iflag=direct
+/tmp/diskspeed_results.txt
+==========
+1+0 records in
+1+0 records out
+1000000000 bytes (1.0 GB, 954 MiB) copied, 1.93386 s, 517 MB/s
+==========
+ratedspeed: [517000000]
+startpos: [478]
+startposdisp: [480]
+CurrPer: [100]
+Performance testing /dev/sdf (Cache) at 480 GB (100%)  478
+dd if=/dev/sdf of=/dev/null bs=1GB count=1 skip=478 iflag=direct
+/tmp/diskspeed_results.txt
+==========
+1+0 records in
+1+0 records out
+1000000000 bytes (1.0 GB, 954 MiB) copied, 1.76806 s, 566 MB/s
+==========
+ratedspeed: [566000000]
+/dev/sdf (Cache): 535 MB/sec avg
+========== END OF DRIVE ==========
+Current Unraid slot: Parity - /dev/sdg
+/tmp/diskspeed.tmp
+==========
+
+/dev/sdg:
+
+ATA device, with non-removable media
+	Model Number:       ST4000DM000-1F2168                      
+	Serial Number:      Z3040V13
+	Firmware Revision:  CC54    
+	Transport:          Serial, SATA 1.0a, SATA II Extensions, SATA Rev 2.5, SATA Rev 2.6, SATA Rev 3.0
+Standards:
+	Used: unknown (minor revision code 0x001f) 
+	Supported: 9 8 7 6 5 
+	Likely used: 9
+Configuration:
+	Logical		max	current
+	cylinders	16383	16383
+	heads		16	16
+	sectors/track	63	63
+	--
+	CHS current addressable sectors:   16514064
+	LBA    user addressable sectors:  268435455
+	LBA48  user addressable sectors: 7814037168
+	Logical  Sector size:                   512 bytes
+	Physical Sector size:                  4096 bytes
+	Logical Sector-0 offset:                  0 bytes
+	device size with M = 1024*1024:     3815447 MBytes
+	device size with M = 1000*1000:     4000787 MBytes (4000 GB)
+	cache/buffer size  = unknown
+	Form Factor: 3.5 inch
+	Nominal Media Rotation Rate: 5900
+Capabilities:
+	LBA, IORDY(can be disabled)
+	Queue depth: 32
+	Standby timer values: spec'd by Standard, no device specific minimum
+	R/W multiple sector transfer: Max = 16	Current = ?
+	Advanced power management level: 128
+	Recommended acoustic management value: 208, current value: 208
+	DMA: mdma0 mdma1 mdma2 udma0 udma1 udma2 udma3 udma4 udma5 *udma6 
+	     Cycle time: min=120ns recommended=120ns
+	PIO: pio0 pio1 pio2 pio3 pio4 
+	     Cycle time: no flow control=120ns  IORDY flow control=120ns
+Commands/features:
+	Enabled	Supported:
+	   *	SMART feature set
+	    	Security Mode feature set
+	   *	Power Management feature set
+	   *	Write cache
+	   *	Look-ahead
+	   *	Host Protected Area feature set
+	   *	WRITE_BUFFER command
+	   *	READ_BUFFER command
+	   *	DOWNLOAD_MICROCODE
+	   *	Advanced Power Management feature set
+	    	Power-Up In Standby feature set
+	    	SET_FEATURES required to spinup after power up
+	    	SET_MAX security extension
+	   *	48-bit Address feature set
+	   *	Device Configuration Overlay feature set
+	   *	Mandatory FLUSH_CACHE
+	   *	FLUSH_CACHE_EXT
+	   *	SMART error logging
+	   *	SMART self-test
+	   *	General Purpose Logging feature set
+	   *	WRITE_{DMA|MULTIPLE}_FUA_EXT
+	   *	64-bit World wide name
+	    	Write-Read-Verify feature set
+	   *	WRITE_UNCORRECTABLE_EXT command
+	   *	{READ,WRITE}_DMA_EXT_GPL commands
+	   *	Segmented DOWNLOAD_MICROCODE
+	   *	Gen1 signaling speed (1.5Gb/s)
+	   *	Gen2 signaling speed (3.0Gb/s)
+	   *	Gen3 signaling speed (6.0Gb/s)
+	   *	Native Command Queueing (NCQ)
+	   *	Phy event counters
+	   *	READ_LOG_DMA_EXT equivalent to READ_LOG_EXT
+	    	DMA Setup Auto-Activate optimization
+	    	Device-initiated interface power management
+	   *	Software settings preservation
+	   *	SMART Command Transport (SCT) feature set
+	   *	SCT Write Same (AC2)
+	    	unknown 206[7]
+	    	unknown 206[12] (vendor specific)
+	   *	reserved 69[7]
+Security: 
+	Master password revision code = 65534
+		supported
+	not	enabled
+	not	locked
+	not	frozen
+	not	expired: security count
+		supported: enhanced erase
+	462min for SECURITY ERASE UNIT. 462min for ENHANCED SECURITY ERASE UNIT. 
+Logical Unit WWN Device Identifier: 5000c5007b57ec7e
+	NAA		: 5
+	IEEE OUI	: 000c50
+	Unique ID	: 07b57ec7e
+Checksum: correct
+==========
+Model: [ST4000DM000-1F2168]
+Serial: [Z3040V13]
+GB: []
+Drive skipped
+Current Unraid slot: Disk 4 - /dev/sdh
+/tmp/diskspeed.tmp
+==========
+
+/dev/sdh:
+
+ATA device, with non-removable media
+	Model Number:       ST3000DM001-1CH166                      
+	Serial Number:      W1F1NQHP
+	Firmware Revision:  CC24    
+	Transport:          Serial, SATA Rev 3.0
+Standards:
+	Used: unknown (minor revision code 0x0029) 
+	Supported: 8 7 6 5 
+	Likely used: 8
+Configuration:
+	Logical		max	current
+	cylinders	16383	16383
+	heads		16	16
+	sectors/track	63	63
+	--
+	CHS current addressable sectors:   16514064
+	LBA    user addressable sectors:  268435455
+	LBA48  user addressable sectors: 5860533168
+	Logical  Sector size:                   512 bytes
+	Physical Sector size:                  4096 bytes
+	Logical Sector-0 offset:                  0 bytes
+	device size with M = 1024*1024:     2861588 MBytes
+	device size with M = 1000*1000:     3000592 MBytes (3000 GB)
+	cache/buffer size  = unknown
+	Form Factor: 3.5 inch
+	Nominal Media Rotation Rate: 7200
+Capabilities:
+	LBA, IORDY(can be disabled)
+	Queue depth: 32
+	Standby timer values: spec'd by Standard, no device specific minimum
+	R/W multiple sector transfer: Max = 16	Current = ?
+	Advanced power management level: 128
+	Recommended acoustic management value: 208, current value: 0
+	DMA: mdma0 mdma1 mdma2 udma0 udma1 udma2 udma3 udma4 udma5 *udma6 
+	     Cycle time: min=120ns recommended=120ns
+	PIO: pio0 pio1 pio2 pio3 pio4 
+	     Cycle time: no flow control=120ns  IORDY flow control=120ns
+Commands/features:
+	Enabled	Supported:
+	   *	SMART feature set
+	    	Security Mode feature set
+	   *	Power Management feature set
+	   *	Write cache
+	   *	Look-ahead
+	   *	Host Protected Area feature set
+	   *	WRITE_BUFFER command
+	   *	READ_BUFFER command
+	   *	DOWNLOAD_MICROCODE
+	   *	Advanced Power Management feature set
+	    	SET_MAX security extension
+	   *	48-bit Address feature set
+	   *	Device Configuration Overlay feature set
+	   *	Mandatory FLUSH_CACHE
+	   *	FLUSH_CACHE_EXT
+	   *	SMART error logging
+	   *	SMART self-test
+	   *	General Purpose Logging feature set
+	   *	WRITE_{DMA|MULTIPLE}_FUA_EXT
+	   *	64-bit World wide name
+	    	Write-Read-Verify feature set
+	   *	WRITE_UNCORRECTABLE_EXT command
+	   *	{READ,WRITE}_DMA_EXT_GPL commands
+	   *	Segmented DOWNLOAD_MICROCODE
+	   *	Gen1 signaling speed (1.5Gb/s)
+	   *	Gen2 signaling speed (3.0Gb/s)
+	   *	Gen3 signaling speed (6.0Gb/s)
+	   *	Native Command Queueing (NCQ)
+	   *	Phy event counters
+	   *	READ_LOG_DMA_EXT equivalent to READ_LOG_EXT
+	    	DMA Setup Auto-Activate optimization
+	    	Device-initiated interface power management
+	   *	Software settings preservation
+	   *	SMART Command Transport (SCT) feature set
+	   *	SCT Write Same (AC2)
+	    	unknown 206[7]
+	    	unknown 206[12] (vendor specific)
+	    	unknown 206[13] (vendor specific)
+Security: 
+	Master password revision code = 65534
+		supported
+	not	enabled
+	not	locked
+	not	frozen
+	not	expired: security count
+		supported: enhanced erase
+	314min for SECURITY ERASE UNIT. 314min for ENHANCED SECURITY ERASE UNIT. 
+Logical Unit WWN Device Identifier: 5000c5005cf04f01
+	NAA		: 5
+	IEEE OUI	: 000c50
+	Unique ID	: 05cf04f01
+Checksum: correct
+==========
+Model: [ST3000DM001-1CH166]
+Serial: [W1F1NQHP]
+GB: []
+Drive skipped
+Current Unraid slot: Disk 5 - /dev/sdi
+/tmp/diskspeed.tmp
+==========
+
+/dev/sdi:
+
+ATA device, with non-removable media
+	Model Number:       ST3000DM008-2DM166                      
+	Serial Number:      Z503GRSV
+	Firmware Revision:  CC26    
+	Transport:          Serial, SATA 1.0a, SATA II Extensions, SATA Rev 2.5, SATA Rev 2.6, SATA Rev 3.0
+Standards:
+	Used: unknown (minor revision code 0x001f) 
+	Supported: 9 8 7 6 5 
+	Likely used: 9
+Configuration:
+	Logical		max	current
+	cylinders	16383	16383
+	heads		16	16
+	sectors/track	63	63
+	--
+	CHS current addressable sectors:   16514064
+	LBA    user addressable sectors:  268435455
+	LBA48  user addressable sectors: 5860533168
+	Logical  Sector size:                   512 bytes
+	Physical Sector size:                  4096 bytes
+	Logical Sector-0 offset:                  0 bytes
+	device size with M = 1024*1024:     2861588 MBytes
+	device size with M = 1000*1000:     3000592 MBytes (3000 GB)
+	cache/buffer size  = unknown
+	Form Factor: 3.5 inch
+	Nominal Media Rotation Rate: 7200
+Capabilities:
+	LBA, IORDY(can be disabled)
+	Queue depth: 32
+	Standby timer values: spec'd by Standard, no device specific minimum
+	R/W multiple sector transfer: Max = 16	Current = ?
+	Advanced power management level: 128
+	Recommended acoustic management value: 208, current value: 208
+	DMA: mdma0 mdma1 mdma2 udma0 udma1 udma2 udma3 udma4 udma5 *udma6 
+	     Cycle time: min=120ns recommended=120ns
+	PIO: pio0 pio1 pio2 pio3 pio4 
+	     Cycle time: no flow control=120ns  IORDY flow control=120ns
+Commands/features:
+	Enabled	Supported:
+	   *	SMART feature set
+	    	Security Mode feature set
+	   *	Power Management feature set
+	   *	Write cache
+	   *	Look-ahead
+	   *	Host Protected Area feature set
+	   *	WRITE_BUFFER command
+	   *	READ_BUFFER command
+	   *	DOWNLOAD_MICROCODE
+	   *	Advanced Power Management feature set
+	    	Power-Up In Standby feature set
+	   *	SET_FEATURES required to spinup after power up
+	    	SET_MAX security extension
+	   *	48-bit Address feature set
+	   *	Device Configuration Overlay feature set
+	   *	Mandatory FLUSH_CACHE
+	   *	FLUSH_CACHE_EXT
+	   *	SMART error logging
+	   *	SMART self-test
+	   *	General Purpose Logging feature set
+	   *	WRITE_{DMA|MULTIPLE}_FUA_EXT
+	   *	64-bit World wide name
+	    	Write-Read-Verify feature set
+	   *	WRITE_UNCORRECTABLE_EXT command
+	   *	{READ,WRITE}_DMA_EXT_GPL commands
+	   *	Segmented DOWNLOAD_MICROCODE
+	   *	unknown 119[6]
+	   *	Gen1 signaling speed (1.5Gb/s)
+	   *	Gen2 signaling speed (3.0Gb/s)
+	   *	Gen3 signaling speed (6.0Gb/s)
+	   *	Native Command Queueing (NCQ)
+	   *	Phy event counters
+	   *	READ_LOG_DMA_EXT equivalent to READ_LOG_EXT
+	    	DMA Setup Auto-Activate optimization
+	    	Device-initiated interface power management
+	   *	Software settings preservation
+	    	unknown 78[7]
+	   *	SMART Command Transport (SCT) feature set
+	   *	SCT Write Same (AC2)
+	    	unknown 206[7]
+	    	unknown 206[12] (vendor specific)
+Security: 
+	Master password revision code = 65534
+		supported
+	not	enabled
+	not	locked
+	not	frozen
+	not	expired: security count
+		supported: enhanced erase
+	316min for SECURITY ERASE UNIT. 316min for ENHANCED SECURITY ERASE UNIT. 
+Logical Unit WWN Device Identifier: 5000c50092649806
+	NAA		: 5
+	IEEE OUI	: 000c50
+	Unique ID	: 092649806
+Checksum: correct
+==========
+Model: [ST3000DM008-2DM166]
+Serial: [Z503GRSV]
+GB: []
+Drive skipped
+Current Unraid slot: Disk 7 - /dev/sdj
+/tmp/diskspeed.tmp
+==========
+
+/dev/sdj:
+
+ATA device, with non-removable media
+	Model Number:       ST3000DM001-1CH166                      
+	Serial Number:      Z1F33M6R
+	Firmware Revision:  CC27    
+	Transport:          Serial, SATA 1.0a, SATA II Extensions, SATA Rev 2.5, SATA Rev 2.6, SATA Rev 3.0
+Standards:
+	Used: unknown (minor revision code 0x001f) 
+	Supported: 9 8 7 6 5 
+	Likely used: 9
+Configuration:
+	Logical		max	current
+	cylinders	16383	16383
+	heads		16	16
+	sectors/track	63	63
+	--
+	CHS current addressable sectors:   16514064
+	LBA    user addressable sectors:  268435455
+	LBA48  user addressable sectors: 5860533168
+	Logical  Sector size:                   512 bytes
+	Physical Sector size:                  4096 bytes
+	Logical Sector-0 offset:                  0 bytes
+	device size with M = 1024*1024:     2861588 MBytes
+	device size with M = 1000*1000:     3000592 MBytes (3000 GB)
+	cache/buffer size  = unknown
+	Form Factor: 3.5 inch
+	Nominal Media Rotation Rate: 7200
+Capabilities:
+	LBA, IORDY(can be disabled)
+	Queue depth: 32
+	Standby timer values: spec'd by Standard, no device specific minimum
+	R/W multiple sector transfer: Max = 16	Current = ?
+	Advanced power management level: 128
+	Recommended acoustic management value: 208, current value: 0
+	DMA: mdma0 mdma1 mdma2 udma0 udma1 udma2 udma3 udma4 udma5 *udma6 
+	     Cycle time: min=120ns recommended=120ns
+	PIO: pio0 pio1 pio2 pio3 pio4 
+	     Cycle time: no flow control=120ns  IORDY flow control=120ns
+Commands/features:
+	Enabled	Supported:
+	   *	SMART feature set
+	    	Security Mode feature set
+	   *	Power Management feature set
+	   *	Write cache
+	   *	Look-ahead
+	   *	Host Protected Area feature set
+	   *	WRITE_BUFFER command
+	   *	READ_BUFFER command
+	   *	DOWNLOAD_MICROCODE
+	   *	Advanced Power Management feature set
+	    	Power-Up In Standby feature set
+	   *	SET_FEATURES required to spinup after power up
+	    	SET_MAX security extension
+	   *	48-bit Address feature set
+	   *	Device Configuration Overlay feature set
+	   *	Mandatory FLUSH_CACHE
+	   *	FLUSH_CACHE_EXT
+	   *	SMART error logging
+	   *	SMART self-test
+	   *	General Purpose Logging feature set
+	   *	WRITE_{DMA|MULTIPLE}_FUA_EXT
+	   *	64-bit World wide name
+	    	Write-Read-Verify feature set
+	   *	WRITE_UNCORRECTABLE_EXT command
+	   *	{READ,WRITE}_DMA_EXT_GPL commands
+	   *	Segmented DOWNLOAD_MICROCODE
+	   *	Gen1 signaling speed (1.5Gb/s)
+	   *	Gen2 signaling speed (3.0Gb/s)
+	   *	Gen3 signaling speed (6.0Gb/s)
+	   *	Native Command Queueing (NCQ)
+	   *	Phy event counters
+	   *	READ_LOG_DMA_EXT equivalent to READ_LOG_EXT
+	    	DMA Setup Auto-Activate optimization
+	    	Device-initiated interface power management
+	   *	Software settings preservation
+	   *	SMART Command Transport (SCT) feature set
+	   *	SCT Write Same (AC2)
+	    	unknown 206[7]
+	    	unknown 206[12] (vendor specific)
+	    	unknown 206[13] (vendor specific)
+Security: 
+	Master password revision code = 65534
+		supported
+	not	enabled
+	not	locked
+	not	frozen
+	not	expired: security count
+		supported: enhanced erase
+	326min for SECURITY ERASE UNIT. 326min for ENHANCED SECURITY ERASE UNIT. 
+Logical Unit WWN Device Identifier: 5000c50050a5dee9
+	NAA		: 5
+	IEEE OUI	: 000c50
+	Unique ID	: 050a5dee9
+Checksum: correct
+==========
+Model: [ST3000DM001-1CH166]
+Serial: [Z1F33M6R]
+GB: []
+Drive skipped
+Current Unraid slot: Disk 9 - /dev/sdk
+/tmp/diskspeed.tmp
+==========
+
+/dev/sdk:
+
+ATA device, with non-removable media
+	Model Number:       ST3000DM001-1ER166                      
+	Serial Number:      Z500HGBE
+	Firmware Revision:  CC25    
+	Transport:          Serial, SATA 1.0a, SATA II Extensions, SATA Rev 2.5, SATA Rev 2.6, SATA Rev 3.0
+Standards:
+	Used: unknown (minor revision code 0x001f) 
+	Supported: 9 8 7 6 5 
+	Likely used: 9
+Configuration:
+	Logical		max	current
+	cylinders	16383	16383
+	heads		16	16
+	sectors/track	63	63
+	--
+	CHS current addressable sectors:   16514064
+	LBA    user addressable sectors:  268435455
+	LBA48  user addressable sectors: 5860533168
+	Logical  Sector size:                   512 bytes
+	Physical Sector size:                  4096 bytes
+	Logical Sector-0 offset:                  0 bytes
+	device size with M = 1024*1024:     2861588 MBytes
+	device size with M = 1000*1000:     3000592 MBytes (3000 GB)
+	cache/buffer size  = unknown
+	Form Factor: 3.5 inch
+	Nominal Media Rotation Rate: 7200
+Capabilities:
+	LBA, IORDY(can be disabled)
+	Queue depth: 32
+	Standby timer values: spec'd by Standard, no device specific minimum
+	R/W multiple sector transfer: Max = 16	Current = ?
+	Advanced power management level: 128
+	Recommended acoustic management value: 208, current value: 208
+	DMA: mdma0 mdma1 mdma2 udma0 udma1 udma2 udma3 udma4 udma5 *udma6 
+	     Cycle time: min=120ns recommended=120ns
+	PIO: pio0 pio1 pio2 pio3 pio4 
+	     Cycle time: no flow control=120ns  IORDY flow control=120ns
+Commands/features:
+	Enabled	Supported:
+	   *	SMART feature set
+	    	Security Mode feature set
+	   *	Power Management feature set
+	   *	Write cache
+	   *	Look-ahead
+	   *	Host Protected Area feature set
+	   *	WRITE_BUFFER command
+	   *	READ_BUFFER command
+	   *	DOWNLOAD_MICROCODE
+	   *	Advanced Power Management feature set
+	    	Power-Up In Standby feature set
+	   *	SET_FEATURES required to spinup after power up
+	    	SET_MAX security extension
+	   *	48-bit Address feature set
+	   *	Device Configuration Overlay feature set
+	   *	Mandatory FLUSH_CACHE
+	   *	FLUSH_CACHE_EXT
+	   *	SMART error logging
+	   *	SMART self-test
+	   *	General Purpose Logging feature set
+	   *	WRITE_{DMA|MULTIPLE}_FUA_EXT
+	   *	64-bit World wide name
+	    	Write-Read-Verify feature set
+	   *	WRITE_UNCORRECTABLE_EXT command
+	   *	{READ,WRITE}_DMA_EXT_GPL commands
+	   *	Segmented DOWNLOAD_MICROCODE
+	   *	unknown 119[6]
+	   *	Gen1 signaling speed (1.5Gb/s)
+	   *	Gen2 signaling speed (3.0Gb/s)
+	   *	Gen3 signaling speed (6.0Gb/s)
+	   *	Native Command Queueing (NCQ)
+	   *	Phy event counters
+	   *	READ_LOG_DMA_EXT equivalent to READ_LOG_EXT
+	    	DMA Setup Auto-Activate optimization
+	    	Device-initiated interface power management
+	   *	Software settings preservation
+	    	unknown 78[7]
+	   *	SMART Command Transport (SCT) feature set
+	   *	SCT Write Same (AC2)
+	    	unknown 206[7]
+	    	unknown 206[12] (vendor specific)
+Security: 
+	Master password revision code = 65534
+		supported
+	not	enabled
+	not	locked
+	not	frozen
+	not	expired: security count
+		supported: enhanced erase
+	318min for SECURITY ERASE UNIT. 318min for ENHANCED SECURITY ERASE UNIT. 
+Logical Unit WWN Device Identifier: 5000c500797adea5
+	NAA		: 5
+	IEEE OUI	: 000c50
+	Unique ID	: 0797adea5
+Checksum: correct
+==========
+Model: [ST3000DM001-1ER166]
+Serial: [Z500HGBE]
+GB: []
+Drive skipped
+Current Unraid slot: Disk 6 - /dev/sdl
+/tmp/diskspeed.tmp
+==========
+
+/dev/sdl:
+
+ATA device, with non-removable media
+	Model Number:       ST4000DM000-1F2168                      
+	Serial Number:      Z302BNB2
+	Firmware Revision:  CC54    
+	Transport:          Serial, SATA 1.0a, SATA II Extensions, SATA Rev 2.5, SATA Rev 2.6, SATA Rev 3.0
+Standards:
+	Used: unknown (minor revision code 0x001f) 
+	Supported: 9 8 7 6 5 
+	Likely used: 9
+Configuration:
+	Logical		max	current
+	cylinders	16383	16383
+	heads		16	16
+	sectors/track	63	63
+	--
+	CHS current addressable sectors:   16514064
+	LBA    user addressable sectors:  268435455
+	LBA48  user addressable sectors: 7814037168
+	Logical  Sector size:                   512 bytes
+	Physical Sector size:                  4096 bytes
+	Logical Sector-0 offset:                  0 bytes
+	device size with M = 1024*1024:     3815447 MBytes
+	device size with M = 1000*1000:     4000787 MBytes (4000 GB)
+	cache/buffer size  = unknown
+	Form Factor: 3.5 inch
+	Nominal Media Rotation Rate: 5900
+Capabilities:
+	LBA, IORDY(can be disabled)
+	Queue depth: 32
+	Standby timer values: spec'd by Standard, no device specific minimum
+	R/W multiple sector transfer: Max = 16	Current = ?
+	Advanced power management level: 128
+	Recommended acoustic management value: 208, current value: 208
+	DMA: mdma0 mdma1 mdma2 udma0 udma1 udma2 udma3 udma4 udma5 *udma6 
+	     Cycle time: min=120ns recommended=120ns
+	PIO: pio0 pio1 pio2 pio3 pio4 
+	     Cycle time: no flow control=120ns  IORDY flow control=120ns
+Commands/features:
+	Enabled	Supported:
+	   *	SMART feature set
+	    	Security Mode feature set
+	   *	Power Management feature set
+	   *	Write cache
+	   *	Look-ahead
+	   *	Host Protected Area feature set
+	   *	WRITE_BUFFER command
+	   *	READ_BUFFER command
+	   *	DOWNLOAD_MICROCODE
+	   *	Advanced Power Management feature set
+	    	Power-Up In Standby feature set
+	    	SET_FEATURES required to spinup after power up
+	    	SET_MAX security extension
+	   *	48-bit Address feature set
+	   *	Device Configuration Overlay feature set
+	   *	Mandatory FLUSH_CACHE
+	   *	FLUSH_CACHE_EXT
+	   *	SMART error logging
+	   *	SMART self-test
+	   *	General Purpose Logging feature set
+	   *	WRITE_{DMA|MULTIPLE}_FUA_EXT
+	   *	64-bit World wide name
+	    	Write-Read-Verify feature set
+	   *	WRITE_UNCORRECTABLE_EXT command
+	   *	{READ,WRITE}_DMA_EXT_GPL commands
+	   *	Segmented DOWNLOAD_MICROCODE
+	   *	Gen1 signaling speed (1.5Gb/s)
+	   *	Gen2 signaling speed (3.0Gb/s)
+	   *	Gen3 signaling speed (6.0Gb/s)
+	   *	Native Command Queueing (NCQ)
+	   *	Phy event counters
+	   *	READ_LOG_DMA_EXT equivalent to READ_LOG_EXT
+	    	DMA Setup Auto-Activate optimization
+	    	Device-initiated interface power management
+	   *	Software settings preservation
+	   *	SMART Command Transport (SCT) feature set
+	   *	SCT Write Same (AC2)
+	    	unknown 206[7]
+	    	unknown 206[12] (vendor specific)
+	   *	reserved 69[7]
+Security: 
+	Master password revision code = 65534
+		supported
+	not	enabled
+	not	locked
+	not	frozen
+	not	expired: security count
+		supported: enhanced erase
+	504min for SECURITY ERASE UNIT. 504min for ENHANCED SECURITY ERASE UNIT. 
+Logical Unit WWN Device Identifier: 5000c50079423e67
+	NAA		: 5
+	IEEE OUI	: 000c50
+	Unique ID	: 079423e67
+Checksum: correct
+==========
+Model: [ST4000DM000-1F2168]
+Serial: [Z302BNB2]
+GB: []
+Drive skipped
+Current Unraid slot: Disk 1 - /dev/sdm
+/tmp/diskspeed.tmp
+==========
+
+/dev/sdm:
+
+ATA device, with non-removable media
+	Model Number:       ST3000DM001-1CH166                      
+	Serial Number:      Z1F33KPN
+	Firmware Revision:  CC27    
+	Transport:          Serial, SATA 1.0a, SATA II Extensions, SATA Rev 2.5, SATA Rev 2.6, SATA Rev 3.0
+Standards:
+	Used: unknown (minor revision code 0x001f) 
+	Supported: 9 8 7 6 5 
+	Likely used: 9
+Configuration:
+	Logical		max	current
+	cylinders	16383	16383
+	heads		16	16
+	sectors/track	63	63
+	--
+	CHS current addressable sectors:   16514064
+	LBA    user addressable sectors:  268435455
+	LBA48  user addressable sectors: 5860533168
+	Logical  Sector size:                   512 bytes
+	Physical Sector size:                  4096 bytes
+	Logical Sector-0 offset:                  0 bytes
+	device size with M = 1024*1024:     2861588 MBytes
+	device size with M = 1000*1000:     3000592 MBytes (3000 GB)
+	cache/buffer size  = unknown
+	Form Factor: 3.5 inch
+	Nominal Media Rotation Rate: 7200
+Capabilities:
+	LBA, IORDY(can be disabled)
+	Queue depth: 32
+	Standby timer values: spec'd by Standard, no device specific minimum
+	R/W multiple sector transfer: Max = 16	Current = ?
+	Advanced power management level: 128
+	Recommended acoustic management value: 208, current value: 0
+	DMA: mdma0 mdma1 mdma2 udma0 udma1 udma2 udma3 udma4 udma5 *udma6 
+	     Cycle time: min=120ns recommended=120ns
+	PIO: pio0 pio1 pio2 pio3 pio4 
+	     Cycle time: no flow control=120ns  IORDY flow control=120ns
+Commands/features:
+	Enabled	Supported:
+	   *	SMART feature set
+	    	Security Mode feature set
+	   *	Power Management feature set
+	   *	Write cache
+	   *	Look-ahead
+	   *	Host Protected Area feature set
+	   *	WRITE_BUFFER command
+	   *	READ_BUFFER command
+	   *	DOWNLOAD_MICROCODE
+	   *	Advanced Power Management feature set
+	    	Power-Up In Standby feature set
+	   *	SET_FEATURES required to spinup after power up
+	    	SET_MAX security extension
+	   *	48-bit Address feature set
+	   *	Device Configuration Overlay feature set
+	   *	Mandatory FLUSH_CACHE
+	   *	FLUSH_CACHE_EXT
+	   *	SMART error logging
+	   *	SMART self-test
+	   *	General Purpose Logging feature set
+	   *	WRITE_{DMA|MULTIPLE}_FUA_EXT
+	   *	64-bit World wide name
+	    	Write-Read-Verify feature set
+	   *	WRITE_UNCORRECTABLE_EXT command
+	   *	{READ,WRITE}_DMA_EXT_GPL commands
+	   *	Segmented DOWNLOAD_MICROCODE
+	   *	Gen1 signaling speed (1.5Gb/s)
+	   *	Gen2 signaling speed (3.0Gb/s)
+	   *	Gen3 signaling speed (6.0Gb/s)
+	   *	Native Command Queueing (NCQ)
+	   *	Phy event counters
+	   *	READ_LOG_DMA_EXT equivalent to READ_LOG_EXT
+	    	DMA Setup Auto-Activate optimization
+	    	Device-initiated interface power management
+	   *	Software settings preservation
+	   *	SMART Command Transport (SCT) feature set
+	   *	SCT Write Same (AC2)
+	    	unknown 206[7]
+	    	unknown 206[12] (vendor specific)
+	    	unknown 206[13] (vendor specific)
+Security: 
+	Master password revision code = 65534
+		supported
+	not	enabled
+	not	locked
+	not	frozen
+	not	expired: security count
+		supported: enhanced erase
+	318min for SECURITY ERASE UNIT. 318min for ENHANCED SECURITY ERASE UNIT. 
+Logical Unit WWN Device Identifier: 5000c50050a62f10
+	NAA		: 5
+	IEEE OUI	: 000c50
+	Unique ID	: 050a62f10
+Checksum: correct
+==========
+Model: [ST3000DM001-1CH166]
+Serial: [Z1F33KPN]
+GB: []
+Drive skipped
+Current Unraid slot: Disk 8 - /dev/sdn
+/tmp/diskspeed.tmp
+==========
+
+/dev/sdn:
+
+ATA device, with non-removable media
+	Model Number:       ST3000DM001-9YN166                      
+	Serial Number:      Z1F186TB
+	Firmware Revision:  CC4B    
+	Transport:          Serial, SATA Rev 3.0
+Standards:
+	Used: unknown (minor revision code 0x0029) 
+	Supported: 8 7 6 5 
+	Likely used: 8
+Configuration:
+	Logical		max	current
+	cylinders	16383	16383
+	heads		16	16
+	sectors/track	63	63
+	--
+	CHS current addressable sectors:   16514064
+	LBA    user addressable sectors:  268435455
+	LBA48  user addressable sectors: 5860533168
+	Logical  Sector size:                   512 bytes
+	Physical Sector size:                  4096 bytes
+	Logical Sector-0 offset:                  0 bytes
+	device size with M = 1024*1024:     2861588 MBytes
+	device size with M = 1000*1000:     3000592 MBytes (3000 GB)
+	cache/buffer size  = unknown
+	Nominal Media Rotation Rate: 7200
+Capabilities:
+	LBA, IORDY(can be disabled)
+	Queue depth: 32
+	Standby timer values: spec'd by Standard, no device specific minimum
+	R/W multiple sector transfer: Max = 16	Current = ?
+	Advanced power management level: 128
+	Recommended acoustic management value: 208, current value: 0
+	DMA: mdma0 mdma1 mdma2 udma0 udma1 udma2 udma3 udma4 udma5 *udma6 
+	     Cycle time: min=120ns recommended=120ns
+	PIO: pio0 pio1 pio2 pio3 pio4 
+	     Cycle time: no flow control=120ns  IORDY flow control=120ns
+Commands/features:
+	Enabled	Supported:
+	   *	SMART feature set
+	    	Security Mode feature set
+	   *	Power Management feature set
+	   *	Write cache
+	   *	Look-ahead
+	   *	Host Protected Area feature set
+	   *	WRITE_BUFFER command
+	   *	READ_BUFFER command
+	   *	DOWNLOAD_MICROCODE
+	   *	Advanced Power Management feature set
+	    	SET_MAX security extension
+	   *	48-bit Address feature set
+	   *	Device Configuration Overlay feature set
+	   *	Mandatory FLUSH_CACHE
+	   *	FLUSH_CACHE_EXT
+	   *	SMART error logging
+	   *	SMART self-test
+	   *	General Purpose Logging feature set
+	   *	WRITE_{DMA|MULTIPLE}_FUA_EXT
+	   *	64-bit World wide name
+	    	Write-Read-Verify feature set
+	   *	WRITE_UNCORRECTABLE_EXT command
+	   *	{READ,WRITE}_DMA_EXT_GPL commands
+	   *	Segmented DOWNLOAD_MICROCODE
+	   *	Gen1 signaling speed (1.5Gb/s)
+	   *	Gen2 signaling speed (3.0Gb/s)
+	   *	Gen3 signaling speed (6.0Gb/s)
+	   *	Native Command Queueing (NCQ)
+	   *	Phy event counters
+	   *	READ_LOG_DMA_EXT equivalent to READ_LOG_EXT
+	    	DMA Setup Auto-Activate optimization
+	    	Device-initiated interface power management
+	   *	Software settings preservation
+	   *	SMART Command Transport (SCT) feature set
+	   *	SCT Write Same (AC2)
+	    	unknown 206[7]
+	    	unknown 206[12] (vendor specific)
+	    	unknown 206[13] (vendor specific)
+Security: 
+	Master password revision code = 65534
+		supported
+	not	enabled
+	not	locked
+	not	frozen
+	not	expired: security count
+		supported: enhanced erase
+	332min for SECURITY ERASE UNIT. 332min for ENHANCED SECURITY ERASE UNIT. 
+Logical Unit WWN Device Identifier: 5000c5004e57040f
+	NAA		: 5
+	IEEE OUI	: 000c50
+	Unique ID	: 04e57040f
+Checksum: correct
+==========
+Model: [ST3000DM001-9YN166]
+Serial: [Z1F186TB]
+GB: []
+Drive skipped
+Program complete

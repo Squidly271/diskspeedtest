@@ -1,0 +1,119 @@
+Menu="SystemInformation"
+Title="Disk Speed Test"
+Icon="/images/speedtest.png"
+---
+<?
+$unRaidDisks = parse_ini_file("/var/local/emhttp/disks.ini",true);
+foreach ($unRaidDisks as $disk) {
+  if ($disk['status'] != "DISK_OK") { continue; }
+  if ($disk['name'] == "flash") { continue; }
+  
+  $tmp['device'] = $disk['device'];
+  $tmp['name'] = $disk['name'];
+  $availableDisks[] = $tmp;
+}
+$html = @file_get_contents("/tmp/diskspeed.html");
+print_r($vars);
+?>
+
+<script>
+var URL = "/plugins/diskspeedtest/include/exec.php";
+
+$(function() {
+  $('#included,#excluded').dropdownchecklist({maxDropHeight:300, width:300, explicitClose:'...close'});
+  reload_message_frame();
+  });
+  
+function reload_message_frame() {
+    var frame_id = 'htmlFrame';
+    if(window.document.getElementById(frame_id).location ) {  
+        window.document.getElementById(frame_id).location.reload(true);
+    } else if (window.document.getElementById(frame_id).contentWindow.location ) {
+        window.document.getElementById(frame_id).contentWindow.location.reload(true);
+    } else if (window.document.getElementById(frame_id).src){
+        window.document.getElementById(frame_id).src = window.document.getElementById(frame_id).src;
+    } else {
+        // fail condition, respond as appropriate, or do nothing
+        alert("Sorry, unable to reload that frame!");
+    }
+}
+function test() {
+  var command = "/usr/local/emhttp/plugins/diskspeedtest/scripts/diskspeed.sh";
+  var exclude = '';
+  $("#excluded").each(function() {
+    var $el = $(this);
+    if ( $el.length ) {
+      if ( $el.val() ) {
+        exclude += $el.val();
+      }
+    }
+  });
+  if ( exclude ) {
+    command = command.concat(" -x "+ exclude);
+  }
+  var include = '';
+  $("#included").each(function() {
+    var $el = $(this);
+    if ( $el.length ) {
+      if ( $el.val() ) {
+        include += $el.val();
+      }
+    }
+  });
+  if ( include ) {
+    command = command.concat(" -n "+ include);
+  }
+  var samples = $("#samples").val();
+  if ( samples < 1) {
+    samples = 5;
+  }
+  command = command.concat(" -s "+samples);
+  var iterations = $("#iterations").val();
+  if ( iterations < 1) {
+    iterations = 1;
+  }
+  command = command.concat(" -i "+iterations);
+  var fast = $("#fast").val();
+  if ( fast == "yes" ) {
+    command = command.concat(" -f ");
+  }
+  $.post(URL,{action:'set_options',command:command},function(data) {
+    if (data) {
+      openBox('/plugins/diskspeedtest/scripts/start.sh',"Disk Speed Test",600,900,true);
+    }
+  });
+}
+</script>
+
+Included Disks:
+: <select id='included' name='included' multiple style='display:none' placeholder='None'>
+  <?foreach ($availableDisks as $tmpdisk):?>
+  <?=mk_option_check($cfg['excluded'],$tmpdisk['device'],$tmpdisk['name']);?>
+  <?endforeach;?>
+  </select>
+  
+Excluded Disks:
+: <select id='excluded' name='excluded' multiple style='display:none' placeholder='None'>
+  <?foreach ($availableDisks as $tmpdisk):?>
+  <?=mk_option_check($cfg['excluded'],$tmpdisk['device'],$tmpdisk['name']);?>
+  <?endforeach;?>
+  </select>
+  
+Number of test points: 
+: <input id='samples' type='number' class='narrow' value='5' maxlength='3'>
+
+Number of iterations:
+: <input id='iterations' type='number' class='narrow' value='1' maxlength='3'>
+
+Fast Mode (Less Accurate):
+: <select id='fast' name='fast' size='1'>
+  <?=mk_option($cfg['fast'],"no","No (Default)")?>
+  <?=mk_option($cfg['fast'],"yes","Yes")?>
+  </select>
+
+<input type='button' value='test' onclick='test();'>
+
+<span id='test'></span><span id='test2'></span>
+<form>
+<iframe id="htmlFrame" src='/plugins/diskspeedtest/diskspeed.html' width='100%' height=1200></iframe>
+</form>
