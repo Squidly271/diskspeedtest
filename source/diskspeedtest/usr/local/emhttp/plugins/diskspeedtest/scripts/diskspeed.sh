@@ -3,6 +3,7 @@
 echo
 echo "diskspeed.sh for UNRAID, version 2.6.4"
 echo "By John Bartlett. Support board @ limetech: http://goo.gl/ysJeYV"
+echo "Minor Modifications By Squid"
 echo
 
 while :
