@@ -1,5 +1,7 @@
 #!/bin/bash
-cat /tmp/options
+echo Running '/tmp/options'
+echo "During the test, unRaid's webUI will be unavailable"
+echo
 '/tmp/options'
 
 

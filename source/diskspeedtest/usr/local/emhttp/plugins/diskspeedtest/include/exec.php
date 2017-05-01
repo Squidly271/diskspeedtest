@@ -6,5 +6,8 @@ switch ($_POST['action']) {
     exec("chmod +x /tmp/options");
     echo $options;
     break;
+  case 'getVars':
+    exec("wget --quiet --output-document=/tmp/diskspeedvars.txt http://localhost/Tools/Vars");
+    break;
 }
 ?>    

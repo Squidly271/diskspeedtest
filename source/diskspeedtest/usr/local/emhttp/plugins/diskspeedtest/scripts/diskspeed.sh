@@ -5,6 +5,15 @@ echo "diskspeed.sh for UNRAID, version 2.6.4"
 echo "By John Bartlett. Support board @ limetech: http://goo.gl/ysJeYV"
 echo
 
+while :
+do
+  if [[ -e /tmp/diskspeed/varFlag ]]
+  then
+    break
+  fi
+done
+rm /tmp/diskspeed/varFlag
+
 # Version 2.6.4
 # Added support for UNRAID version 6.3.0-RC9 & higher.
 #
@@ -96,7 +105,7 @@ echo
 iterations=1
 samples=11
 showhelp=0
-outputfile="/usr/local/emhttp/plugins/diskspeedtest/diskspeed.html"
+outputfile="usr/local/emhttp/plugins/diskspeedtest/diskspeed.html"
 skipdrives=""
 include=0
 includedrives=""
@@ -207,7 +216,7 @@ fi
 # See if the array is in use
 lsof 2>/dev/null | grep "/mnt/disk[0-9]*/" > /tmp/lsof.txt
 if [[ -s /tmp/lsof.txt ]]; then
-	echo "Warning: Files in the array are open. Please refer to /tmp/lsof.txt for a list"
+	echo "Warning: Files in the array are open. These will be listed along with the chart at completion of the tests"
 	echo
 else
 	rm /tmp/lsof.txt
@@ -281,7 +290,7 @@ CurUp=""
 
 # Get a list of UNRAID variables which contains drive information
 #wget --output-document=/tmp/diskspeedvars.txt http://localhost/Tools/Vars
-/usr/local/emhttp/plugins/diskspeedtest/scripts/getVars.php
+#/usr/local/emhttp/plugins/diskspeedtest/scripts/getVars.php
 # Init variables
 FoundArray=0
 InDiskInfo=0
@@ -346,8 +355,8 @@ do
 			fi
 		fi
 	fi
-done < /tmp/diskspeedvars.txt
-rm /tmp/diskspeedvars.txt
+done < /tmp/diskspeed/diskspeedvars.txt
+rm /tmp/diskspeed/diskspeedvars.txt
 
 # Rebuild Arrays to remove empty drive assignments
 AttribArray=(${Attribs//|/ })
@@ -864,7 +873,8 @@ fi
 
 
 # Generate the report
-echo -e -n "<!DOCTYPE html><html><head><meta http-equiv=\042content-type\042 content=\042text/html; charset=UTF-8\042><title>Disk Speed Test</title><script type=\042text/javascript\042 src=\042http://code.jquery.com/jquery-1.9.1.js\042></script><script type=\042text/javascript\042>" > "$outputfile"
+#echo -e -n "<!DOCTYPE html><html><head><meta http-equiv=\042content-type\042 content=\042text/html; charset=UTF-8\042><title>Disk Speed Test</title><script type=\042text/javascript\042 src=\042http://code.jquery.com/jquery-1.9.1.js\042></script><script type=\042text/javascript\042>" > "$outputfile"
+echo -e -n "<script type=\042text/javascript\042 src=\042http://code.jquery.com/jquery-1.9.1.js\042></script><script type=\042text/javascript\042>" > "$outputfile"
 echo -e "\044(function () {\044('#graph1').highcharts({title:{text:'Disk Speed Test'},subtitle:{text:'By Position Percentile'},xAxis:{min:0,max:100,labels:{formatter:function\050\051{return this.value+'%';}}},yAxis:{min:0,title:{text:'Speed/Sec'}},tooltip:{formatter:function(){return this.series.name+': '+this.y/1000000+'MB/sec at '+this.x+'%';}},legend:{enabled:true},plotOptions:{series:{marker:{enabled:false},animation:false,connectNulls:true}},series: [" >> "$outputfile"
 
 # Generate graph lines for drives in the array
@@ -1176,7 +1186,8 @@ if [[ $iterations -eq 1 ]]; then
 else
 	echo "Drives scanned $iterations times every $SlicePer%" >> "$outputfile"
 fi
-echo "</td></tr></table></div></body></html>" >> "$outputfile"
+#echo "</td></tr></table></div></body></html>" >> "$outputfile"
+echo "</td></tr></table>" >> "$outputfile"
 
 echo "After hitting DONE, your results will be displayed"
 echo
