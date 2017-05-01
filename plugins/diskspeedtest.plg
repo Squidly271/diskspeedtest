@@ -3,7 +3,7 @@
 <!ENTITY name      "diskspeedtest">
 <!ENTITY author    "jbartlett/squid">
 <!ENTITY version   "2017.04.30">
-<!ENTITY md5       "5f265ba6f6ab163705b6884004cc5ae2">
+<!ENTITY md5       "a473e0f37385cfcd4fc3f533e3d1c9f5">
 <!ENTITY launch    "Tools/Diskspeed">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
 <!ENTITY github    "Squidly271/diskspeedtest">

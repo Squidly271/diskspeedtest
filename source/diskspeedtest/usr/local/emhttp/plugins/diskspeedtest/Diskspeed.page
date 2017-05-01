@@ -1,6 +1,6 @@
 Menu="SystemInformation"
 Title="Disk Speed Test"
-Icon="/images/speedtest.png"
+Icon="/images/diskspeedtest.png"
 ---
 <?
 $unRaidDisks = parse_ini_file("/var/local/emhttp/disks.ini",true);
