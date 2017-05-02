@@ -41,10 +41,6 @@ $history = array_diff(@scandir("/boot/config/plugins/diskspeedtest/history"),arr
 if ( ! $history ) {
   $history = array();
 }
-$openFiles = @file_get_contents("/tmp/lsof.txt");
-$openFiles = str_replace("\n","<br>",$openFiles);
-@unlink("/tmp/lsof.txt");
-
 $Credits = "
     <center><table align:'center'>
       <tr>
@@ -215,10 +211,5 @@ Fast Mode (Less Accurate):
 > Historical files are stored on the flash drive at <b>/config/plugins/diskspeedtest/history</b> and can be deleted if not required.
 
 <a class='ca_credits' style='float:right;cursor:pointer' onclick='showCredits();'>Credits</a>
-<form>
+
 <iframe id="htmlFrame" src='' frameborder='0'; width='1280' onload='resizeIframe(this);'></iframe>
-</form>
-<?if ( $openFiles ):?>
-<font size='3'><b>Open Files During Last Test</b></font>&nbsp;&nbsp;These *may* have negatively impacted the test  (Refreshing / reloading this page will remove this list)<br><br>
-<span id='openFiles'><?=$openFiles?></span>
-<?endif;?>

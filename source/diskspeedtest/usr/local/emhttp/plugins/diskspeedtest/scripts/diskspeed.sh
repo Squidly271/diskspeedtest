@@ -216,12 +216,12 @@ fi
 
 # See if the array is in use
 lsof 2>/dev/null | grep "/mnt/disk[0-9]*/" > /tmp/lsof.txt
+lsof 2>/dev/null | grep "/mnt/cache/" >> /tmp/lsof.txt
 if [[ -s /tmp/lsof.txt ]]; then
 	echo "Warning: Files in the array are open. These will be listed along with the chart at completion of the tests"
 	echo
-else
-	rm /tmp/lsof.txt
 fi
+rm -rf /tmp/lsof.txt
 
 cp /proc/mdcmd /tmp
 mdNumDisabled=$(grep "mdNumDisabled=" /tmp/mdcmd)
@@ -256,7 +256,7 @@ if [[ $mdNumMissing -ne 0 ]];then
 	exit 1
 fi
 if [[ $mdResyncPos -ne 0 ]];then
-	echo "Error: Parity sync is in progress, please wait until the pairty sync process is complete"
+	echo "Error: Parity sync is in progress, please wait until the parity sync process is complete"
 	exit 1
 fi
 re='^[0-9]+$'
@@ -757,6 +757,7 @@ do
 					fi
 					startposdispsize="TB"
 				fi
+        /usr/local/emhttp/plugins/diskspeedtest/scripts/getlsof.php "$UNRAIDSlot2"
 				if [[ $iterations -eq 1 ]];then
 #					echo -e -n "$CurUp"
 					echo -e "Performance testing /dev/$CurrDisk$UNRAIDSlot2 at $startposdispnum $startposdispsize ($CurrPer%)"
@@ -771,7 +772,7 @@ do
 					fi
 				fi
 				if [[ $fast -eq 1 ]]; then
-					# For the fash test, position the drive head at the start point, does help raise speed rate
+					# For the fast test, position the drive head at the start point, does help raise speed rate
 					dd if=/dev/$CurrDisk of=/dev/null bs=1M count=1 skip=$startpos iflag=direct 2> /tmp/diskspeed_results.txt
 					dd if=/dev/$CurrDisk of=/dev/null bs=1M count=200 skip=$startpos iflag=direct 2> /tmp/diskspeed_results.txt
 					if [[ $log -eq 1 ]]; then
@@ -1187,9 +1188,16 @@ if [[ $iterations -eq 1 ]]; then
 else
 	echo "Drives scanned $iterations times every $SlicePer%" >> "$outputfile"
 fi
-#echo "</td></tr></table></div></body></html>" >> "$outputfile"
-echo "</td></tr></table>" >> "$outputfile"
+echo "</td></tr></table></div></body></html>" >> "$outputfile"
 
+echo "<br><br><font size='3'>Open Files During Test:</font>&nbsp;&nbsp;These <em>may</em> have negatively impacted the test.<br><br>" >> "$outputfile"
+if [[ -s /tmp/lsof.txt ]]; then
+  echo "<div style='border-style:ridge; border-color:red; margin:1; max-height:400px; overflow:auto;'><tt>" >> "$outputfile"
+  cat /tmp/lsof.txt | tr '\n' '\t' | sed -e 's/ /\&nbsp;/g' | sed 's/\t/<br>/g' >> "$outputfile"
+  echo "</tt></div>" >> "$outputfile"
+else
+  echo "No Open Files On Drive(s) Being tested<br>" >> "$outputfile"
+fi
 echo "After hitting DONE, your results will be displayed"
 echo
 
