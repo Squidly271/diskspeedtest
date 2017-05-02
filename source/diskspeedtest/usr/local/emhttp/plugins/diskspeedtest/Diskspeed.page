@@ -44,6 +44,24 @@ if ( ! $history ) {
 $openFiles = @file_get_contents("/tmp/lsof.txt");
 $openFiles = str_replace("\n","<br>",$openFiles);
 @unlink("/tmp/lsof.txt");
+
+$Credits = "
+    <center><table align:'center'>
+      <tr>
+        <td><img src='https://github.com/Squidly271/diskspeedtest/raw/master/avatars/jbartlett.jpg' width='50px;height:50px;'></td>
+        <td><strong>jbartlett</strong></td>
+        <td>Drive Performance Testing Script</td>
+      </tr>
+      <tr>
+        <td><img src='https://github.com/Squidly271/plugin-repository/raw/master/Chode_300.gif' width='50px';height='48px'></td>
+        <td><strong>Squid</strong></td>
+        <td>User Interface</td>
+      </tr>
+    </table></center>
+    <br>
+    <br><center><a href='https://forums.lime-technology.com/topic/48286-plugin-ca-user-scripts/' target='_blank'>Plugin Support Thread</a></center>
+  ";
+  $Credits = str_replace("\n","",$Credits);
 ?>
 <script>
 var URL = "/plugins/diskspeedtest/include/exec.php";
@@ -120,6 +138,7 @@ function test() {
 function resizeIframe(obj) {
   obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
 }
+
 function changeSource() {
   var source = $("#history").val();
   if ( ! source ) {
@@ -127,6 +146,28 @@ function changeSource() {
   }
   $("#htmlFrame").attr("src","/plugins/diskspeedtest/history/history/"+source);
   resizeIframe("#htmlFrame");
+}
+
+function showCredits() {
+  myAlert("Disk Speed Test","<?=$Credits?>","/plugins/diskspeedtest/images/speedtest.png","96x96", true, false, true);
+}
+
+function myAlert(description,textdescription,textimage,imagesize, outsideClick, showCancel, showConfirm, alertType) {
+  if ( !outsideClick ) outsideClick = false;
+  if ( !showCancel )   showCancel = false;
+  if ( !showConfirm )  showConfirm = false;
+  if ( imagesize == "" ) { imagesize = "80x80"; }
+  swal({
+    title: description,
+    text: textdescription,
+    imageUrl: textimage,
+    imageSize: imagesize,
+    allowOutsideClick: outsideClick,
+    showConfirmButton: showConfirm,
+    showCancelButton: showCancel,
+    type: alertType,
+    html: true
+  });
 }
 </script>
 Included Disks:
@@ -142,18 +183,26 @@ Excluded Disks:
   <?=mk_option_check($cfg['excluded'],$tmpdisk['device'],$tmpdisk['name']);?>
   <?endforeach;?>
   </select>
+
+> Set the above to include / exclude drives from the tests.  Only select one or the other.  By default, all drives are included
   
 Number of test points: 
 : <input id='samples' type='number' class='narrow' value='5' maxlength='3'>
 
+> The number of sample points to test per drive
+
 Number of iterations:
 : <input id='iterations' type='number' class='narrow' value='1' maxlength='3'>
+
+> Number of times to test each sample point and then average the result.
 
 Fast Mode (Less Accurate):
 : <select id='fast' name='fast' size='1'>
   <?=mk_option($cfg['fast'],"no","No (Default)")?>
   <?=mk_option($cfg['fast'],"yes","Yes")?>
   </select>
+  
+> Fast Mode uses a 20MB test at each sample point.  Normal Mode is a 1G test at each sample point and is more accurate
 
 <input type='button' value='Run Disk Speed Test' onclick='test();'><br><br>
 <b>History:</b>  <select id='history' onchange='changeSource();'>
@@ -162,6 +211,10 @@ Fast Mode (Less Accurate):
   <option value='<?=$his?>'><?=$his?></option>
 <?endforeach;?>
 </select>
+
+> Historical files are stored on the flash drive at <b>/config/plugins/diskspeedtest/history</b> and can be deleted if not required.
+
+<a class='ca_credits' style='float:right;cursor:pointer' onclick='showCredits();'>Credits</a>
 <form>
 <iframe id="htmlFrame" src='' frameborder='0'; width='1280' onload='resizeIframe(this);'></iframe>
 </form>
