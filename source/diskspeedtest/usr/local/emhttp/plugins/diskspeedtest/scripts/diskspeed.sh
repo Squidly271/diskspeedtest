@@ -8,6 +8,15 @@ PID=$$
 echo $PID > /tmp/diskspeed/PID
 rm /tmp/diskspeed/exitstatus
 
+while :
+do
+  if [[ -e /tmp/diskspeed/varFlag ]]
+  then
+    break
+  fi
+done
+rm /tmp/diskspeed/varFlag
+
 echo
 echo "diskspeed.sh for UNRAID, version 2.6.4"
 echo "By John Bartlett. Support board @ limetech: http://goo.gl/ysJeYV"
@@ -297,7 +306,7 @@ CurUp=""
 
 
 # Get a list of UNRAID variables which contains drive information
-wget --output-document=/tmp/diskspeedvars.txt http://localhost/Tools/Vars
+#wget --output-document=/tmp/diskspeed/diskspeedvars.txt http://localhost/Tools/Vars
 # Init variables
 FoundArray=0
 InDiskInfo=0

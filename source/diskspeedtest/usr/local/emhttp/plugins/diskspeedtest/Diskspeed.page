@@ -8,11 +8,20 @@ exec("mkdir -p /boot/config/plugins/diskspeedtest/history");
 exec("mkdir -p /usr/local/emhttp/plugins/diskspeedtest/history");
 exec("ln -s /boot/config/plugins/diskspeedtest/history /usr/local/emhttp/plugins/diskspeedtest/history");
 
+$descriptorspec = array(
+  0 => array("pipe", "r"),  // stdin is a pipe that the child will read from
+  1 => array("pipe", "w"),  // stdout is a pipe that the child will write to
+  2 => array("pipe", "w") // stderr is a file to write to
+);
+proc_open("/usr/local/emhttp/plugins/diskspeedtest/scripts/getVars.sh",$descriptorspec,$pipes);
+
 if ( is_file("/usr/local/emhttp/plugins/diskspeedtest/diskspeed.html") ) {
   $date = date("Y-m-d h-i-sa");
   exec("mv /usr/local/emhttp/plugins/diskspeedtest/diskspeed.html ".escapeshellarg("/boot/config/plugins/diskspeedtest/history/$date.html"));
   $source = "/plugins/diskspeedtest/history/history/$date.html";
 }
+$unRaidVars = parse_ini_file("/var/local/emhttp/var.ini");
+$parityCheck = $unRaidVars['mdResyncPos'];
 
 $unRaidDisks = parse_ini_file("/var/local/emhttp/disks.ini",true);
 foreach ($unRaidDisks as $disk) {
@@ -148,6 +157,7 @@ function test() {
 
 function cancelTest() {
   $.post(URL,{action:'cancel_script'});
+  location.reload();
 }
 
 function resizeIframe(obj) {
@@ -219,6 +229,7 @@ Fast Mode (Less Accurate):
   </select>
   
 > Fast Mode uses a 200MB test at each sample point.  Normal Mode is a 1G test at each sample point and is more accurate
+
 
 <input id='testButton' type='button' value='Run Disk Speed Test' onclick='test();' disabled>&nbsp;&nbsp;<span id='status'>Status: Refreshing...</span><br><br>
 <b>History:</b>  <select id='history' onchange='changeSource();'>
