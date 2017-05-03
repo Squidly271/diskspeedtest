@@ -8,13 +8,6 @@ exec("mkdir -p /boot/config/plugins/diskspeedtest/history");
 exec("mkdir -p /usr/local/emhttp/plugins/diskspeedtest/history");
 exec("ln -s /boot/config/plugins/diskspeedtest/history /usr/local/emhttp/plugins/diskspeedtest/history");
 
-$descriptorspec = array(
-  0 => array("pipe", "r"),  // stdin is a pipe that the child will read from
-  1 => array("pipe", "w"),  // stdout is a pipe that the child will write to
-  2 => array("pipe", "w") // stderr is a file to write to
-);
-proc_open("/usr/local/emhttp/plugins/diskspeedtest/scripts/getVars.sh",$descriptorspec,$pipes);
-
 if ( is_file("/usr/local/emhttp/plugins/diskspeedtest/diskspeed.html") ) {
   $date = date("Y-m-d h-i-sa");
   exec("mv /usr/local/emhttp/plugins/diskspeedtest/diskspeed.html ".escapeshellarg("/boot/config/plugins/diskspeedtest/history/$date.html"));
@@ -64,13 +57,33 @@ var URL = "/plugins/diskspeedtest/include/exec.php";
 
 $(function() {
   $('#included,#excluded').dropdownchecklist({maxDropHeight:300, width:300, explicitClose:'...close'});
+  setTimeout(function() {
+    getStatus();
+  },3000);
   if ( '<?=$date?>' ) {
     $("#history").val('<?=$date?>.html');
     changeSource();
     reload_message_frame();
-  }
+  } 
+
 });
   
+function getStatus() {
+  $.post(URL,{action:'get_status'},function(data) {
+    if (data) {
+      if (data == "RELOAD") {
+        $("#status").html("RELOADING PAGE...");
+        location.reload();
+      } else {
+        $("#status").html("Status: "+data);
+        setTimeout(function() {
+          getStatus();
+        },3000);
+      }
+    }
+  });
+}
+
 function reload_message_frame() {
     var frame_id = 'htmlFrame';
     if(window.document.getElementById(frame_id).location ) {  
@@ -124,11 +137,17 @@ function test() {
   if ( fast == "yes" ) {
     command = command.concat(" -f ");
   }
+
   $.post(URL,{action:'set_options',command:command},function(data) {
     if (data) {
-      openBox('/plugins/diskspeedtest/scripts/start.sh',"Disk Speed Test - Closing This Window Will Abort The Test",600,900,true);
+      $("#testButton").prop("disabled",true);
+      $.post(URL,{action:'start'});
     }
   });
+}
+
+function cancelTest() {
+  $.post(URL,{action:'cancel_script'});
 }
 
 function resizeIframe(obj) {
@@ -140,6 +159,7 @@ function changeSource() {
   if ( ! source ) {
     return;
   }
+  $("#results").show();
   $("#htmlFrame").attr("src","/plugins/diskspeedtest/history/history/"+source);
   resizeIframe("#htmlFrame");
 }
@@ -198,9 +218,9 @@ Fast Mode (Less Accurate):
   <?=mk_option($cfg['fast'],"yes","Yes")?>
   </select>
   
-> Fast Mode uses a 20MB test at each sample point.  Normal Mode is a 1G test at each sample point and is more accurate
+> Fast Mode uses a 200MB test at each sample point.  Normal Mode is a 1G test at each sample point and is more accurate
 
-<input type='button' value='Run Disk Speed Test' onclick='test();'><br><br>
+<input id='testButton' type='button' value='Run Disk Speed Test' onclick='test();' disabled>&nbsp;&nbsp;<span id='status'>Status: Refreshing...</span><br><br>
 <b>History:</b>  <select id='history' onchange='changeSource();'>
 <option value=''>Select a historical file</option>
 <?foreach($history as $his):?>
@@ -210,6 +230,8 @@ Fast Mode (Less Accurate):
 
 > Historical files are stored on the flash drive at <b>/config/plugins/diskspeedtest/history</b> and can be deleted if not required.
 
-<a class='ca_credits' style='float:right;cursor:pointer' onclick='showCredits();'>Credits</a>
-
+<a style='float:right;cursor:pointer' onclick='showCredits();'>Credits</a><br>
+<span id='results' hidden></span>
 <iframe id="htmlFrame" src='' frameborder='0'; width='1280' onload='resizeIframe(this);'></iframe>
+</span>
+<span id='debug'></span>

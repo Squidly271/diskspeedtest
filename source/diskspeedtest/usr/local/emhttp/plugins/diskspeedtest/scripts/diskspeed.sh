@@ -1,19 +1,18 @@
 #!/bin/bash
+if [[ -e /tmp/diskspeed/PID ]]
+then
+  logger "Diskspeed.sh already running exists"
+  exit 1
+fi
+PID=$$
+echo $PID > /tmp/diskspeed/PID
+rm /tmp/diskspeed/exitstatus
 
 echo
 echo "diskspeed.sh for UNRAID, version 2.6.4"
 echo "By John Bartlett. Support board @ limetech: http://goo.gl/ysJeYV"
 echo "Minor Modifications By Squid"
 echo
-
-while :
-do
-  if [[ -e /tmp/diskspeed/varFlag ]]
-  then
-    break
-  fi
-done
-rm /tmp/diskspeed/varFlag
 
 # Version 2.6.4
 # Added support for UNRAID version 6.3.0-RC9 & higher.
@@ -106,7 +105,7 @@ rm /tmp/diskspeed/varFlag
 iterations=1
 samples=11
 showhelp=0
-outputfile="usr/local/emhttp/plugins/diskspeedtest/diskspeed.html"
+outputfile="/usr/local/emhttp/plugins/diskspeedtest/diskspeed.html"
 skipdrives=""
 include=0
 includedrives=""
@@ -167,7 +166,8 @@ if [ -e "$outputfile.tmp" ]; then
 	rm "$outputfile.tmp"
 fi
 if [ "Test abc123" != "$testoutput" ];then
-	echo "Error: Unable to write to $outputfile"
+	echo "Error: Unable to write to $outputfile" > /tmp/diskspeed/exitstatus
+  rm /tmp/diskspeed/PID
 	exit 1
 fi
 
@@ -190,6 +190,7 @@ if [[ $showhelp -eq 1 ]]; then
 	echo "-l, --log:        Create a debug log file named 'diskspeed.log'"
 	echo "-f, --fast:       Scan 200MB at each location instead of 1GB. Less accurate."
 	echo
+  rm /tmp/diskspeed/PID
 	exit 0
 fi
 
@@ -197,19 +198,18 @@ fi
 FreeMem=$(cat /proc/meminfo | grep MemAvailable | awk '{print $2}')
 if [[ $fast -eq 0 ]]; then
 	if [[ $FreeMem -lt 1048576 ]]; then
-		echo "Error: There is not enough free memory to perform the disk read test."
-		echo "1048576 k required (1 GB), $FreeMem k available."
+		echo "Error: There is not enough free memory to perform the disk read test. 1048576 k required (1 GB), $FreeMem k available." > /tmp/diskspeed/exitstatus
 		if [[ $FreeMem -gt 20480 ]]; then
 			echo "You have enough free RAM to execute with the fast (-f --fast) command flag."
 		fi
+    rm /tmp/diskspeed/PID
 		exit 1
 	fi
 fi
 if [[ $fast -eq 0 ]]; then
 	if [[ $FreeMem -lt 20480 ]]; then
-		echo "Error: There is not enough free memory to perform the disk read test."
-		echo -n "20480k required, $FreeMem"
-		echo "k available."
+		echo "Error: There is not enough free memory to perform the disk read test. 20480k required, $FreeMem k available." > /tmp/diskspeed/exitstatus
+    rm /tmp/diskspeed/PID
 		exit 1
 	fi
 fi
@@ -247,33 +247,40 @@ if [[ $log -eq 1 ]]; then
 fi
 
 if [[ $include -eq 1 ]] && [[ $skipdrives != "" ]]; then
-	echo "Error: You can only specify to include or exclude drives, not both at the same time"
+	echo "Error: You can only specify to include or exclude drives, not both at the same time" > /tmp/diskspeed/exitstatus
+  rm /tmp/diskspeed/PID
 	exit 1
 fi
 
 if [[ $mdNumMissing -ne 0 ]];then
-	echo "Error: There are missing drives in the array"
+	echo "Error: There are missing drives in the array" > /tmp/diskspeed/exitstatus
+  rm /tmp/diskspeed/PID
 	exit 1
 fi
 if [[ $mdResyncPos -ne 0 ]];then
-	echo "Error: Parity sync is in progress, please wait until the parity sync process is complete"
+	echo "Error: Parity sync is in progress, please wait until the parity sync process is complete" > /tmp/diskspeed/exitstatus
+  rm /tmp/diskspeed/PID
 	exit 1
 fi
 re='^[0-9]+$'
 if ! [[ $iterations =~ $re ]]; then
-   echo "Error: Iteration value must be numeric"
+   echo "Error: Iteration value must be numeric" > /tmp/diskspeed/exitstatus
+   rm /tmp/diskspeed/PID
    exit 1
 fi
 if ! [[ $samples =~ $re ]]; then
-   echo "Error: Samples value must be numeric"
+   echo "Error: Samples value must be numeric" > /tmp/diskspeed/exitstatus
+   rm /tmp/diskspeed/PID
    exit 1
 fi
 if [[ $iterations -lt 1 ]]; then
-	echo "Error: Iterations count must be greater than zero"
+	echo "Error: Iterations count must be greater than zero" > /tmp/diskspeed/exitstatus
+  rm /tmp/diskspeed/PID
 	exit 1
 fi
 if [[ $samples -lt 3 ]]; then
-	echo "Error: Sample count must be greater than or equal to 3"
+	echo "Error: Sample count must be greater than or equal to 3" > /tmp/diskspeed/exitstatus
+  rm /tmp/diskspeed/PID
 	exit 1
 fi
 
@@ -290,8 +297,7 @@ CurUp=""
 
 
 # Get a list of UNRAID variables which contains drive information
-#wget --output-document=/tmp/diskspeedvars.txt http://localhost/Tools/Vars
-#/usr/local/emhttp/plugins/diskspeedtest/scripts/getVars.php
+wget --output-document=/tmp/diskspeedvars.txt http://localhost/Tools/Vars
 # Init variables
 FoundArray=0
 InDiskInfo=0
@@ -757,6 +763,7 @@ do
 					fi
 					startposdispsize="TB"
 				fi
+# Get the list of open files for drive being tested        
         /usr/local/emhttp/plugins/diskspeedtest/scripts/getlsof.php "$UNRAIDSlot2"
 				if [[ $iterations -eq 1 ]];then
 #					echo -e -n "$CurUp"
@@ -862,17 +869,17 @@ do
 done
 
 if [[ $disktested -eq 0 ]];then
-	echo "All drives were excluded, nothing to report."
+	echo "All drives were excluded, nothing to report." > /tmp/diskspeed/exitstatus
 	if [[ $log -eq 1 ]]; then
 		echo "All drives exluded" >> diskspeed.log
 	fi
+  rm /tmp/diskspeed/PID
 	exit 1
 fi
 
 if [[ $log -eq 1 ]]; then
 	echo "Program complete" >> diskspeed.log
 fi
-
 
 # Generate the report
 #echo -e -n "<!DOCTYPE html><html><head><meta http-equiv=\042content-type\042 content=\042text/html; charset=UTF-8\042><title>Disk Speed Test</title><script type=\042text/javascript\042 src=\042http://code.jquery.com/jquery-1.9.1.js\042></script><script type=\042text/javascript\042>" > "$outputfile"
@@ -1004,11 +1011,6 @@ do
 	done
 done
 
-
-
-
-
-
 # Generate graph lines for drives outside of the array
 na="<font color=grey>n/a</font>"
 for (( slot=1; slot <= 99; slot++ ))
@@ -1065,8 +1067,6 @@ do
 	fi
 	let CurrDiskID++
 done
-
-
 
 echo -e -n "]});});</script></head><body><style type=\042text/css\042>body,td {font-family:Arial,Helvetica,sans-serif;font-size:13px;color:black;}</style><script src=\042http://code.highcharts.com/highcharts.js\042></script><script src=\042http://code.highcharts.com/modules/exporting.js\042></script><div align=\042center\042><table border=0 cellpadding=0 cellspacing=0><tr><td><div id=\042graph1\042 style=\042min-width: 310px; width: 1000px; height: 400px; margin: 0 auto;" >> "$outputfile"
 if [[ $ShowGraph1 -eq 0 ]]; then
@@ -1181,7 +1181,6 @@ do
 	let CurrDiskID++
 done
 
-
 echo "</table><br/>Generated on <b>$HOSTNAME</b> at `date`<br/>" >> "$outputfile"
 if [[ $iterations -eq 1 ]]; then
 	echo "Drives scanned $iterations time every $SlicePer%" >> "$outputfile"
@@ -1190,6 +1189,7 @@ else
 fi
 echo "</td></tr></table></div></body></html>" >> "$outputfile"
 
+# Display the open files along with the graph
 echo "<br><br><font size='3'>Open Files During Test:</font>&nbsp;&nbsp;These <em>may</em> have negatively impacted the test.<br><br>" >> "$outputfile"
 if [[ -s /tmp/lsof.txt ]]; then
   echo "<div style='border-style:ridge; border-color:red; margin:1; max-height:400px; overflow:auto;'><tt>" >> "$outputfile"
@@ -1234,3 +1234,5 @@ do
 	fi
 	let CurrDiskID++
 done
+echo "finished" > /tmp/diskspeed/finiFlag
+rm -rf /tmp/diskspeed/PID

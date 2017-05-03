@@ -2,8 +2,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "diskspeedtest">
 <!ENTITY author    "jbartlett/squid">
-<!ENTITY version   "2017.05.01a">
-<!ENTITY md5       "1b647b5343997c30233c48a0285ec286">
+<!ENTITY version   "2017.05.02">
+<!ENTITY md5       "deeb7a7e4676eb06db58af7a158a6c43">
 <!ENTITY launch    "Tools/Diskspeed">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
 <!ENTITY github    "Squidly271/diskspeedtest">
@@ -13,14 +13,8 @@
 <PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;">
 
 <CHANGES>
-###2017.05.01a
-- Integrated lsof output into charts
-
-###2017.05.01
-- Added in history.  All seems to work ok
-
-###2017.04.30
-- Initial Test Release
+###2017.05.02
+- Initial Release
 </CHANGES>
 
 <FILE Run="/bin/bash">
