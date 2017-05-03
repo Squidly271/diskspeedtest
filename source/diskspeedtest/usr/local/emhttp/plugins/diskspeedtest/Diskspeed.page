@@ -57,7 +57,7 @@ $Credits = "
       </tr>
     </table></center>
     <br>
-    <br><center><a href='https://forums.lime-technology.com/topic/57023-plugin-disk-speed-test/' target='_blank'>Plugin Support Thread</a></center>
+    <br><center><a href='https://forums.lime-technology.com/topic/29435-drive-performance-testing-version-264-unraid-63-support/' target='_blank'>Original Script Support</a>&nbsp;&nbsp;<a href='https://forums.lime-technology.com/topic/57023-plugin-disk-speed-test/' target='_blank'>Plugin Support Thread</a></center>
   ";
   $Credits = str_replace("\n","",$Credits);
 ?>
