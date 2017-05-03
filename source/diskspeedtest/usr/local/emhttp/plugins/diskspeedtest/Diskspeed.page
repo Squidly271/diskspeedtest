@@ -57,7 +57,7 @@ $Credits = "
       </tr>
     </table></center>
     <br>
-    <br><center><a href='https://forums.lime-technology.com/topic/48286-plugin-ca-user-scripts/' target='_blank'>Plugin Support Thread</a></center>
+    <br><center><a href='https://forums.lime-technology.com/topic/57023-plugin-disk-speed-test/' target='_blank'>Plugin Support Thread</a></center>
   ";
   $Credits = str_replace("\n","",$Credits);
 ?>
@@ -229,7 +229,6 @@ Fast Mode (Less Accurate):
   </select>
   
 > Fast Mode uses a 200MB test at each sample point.  Normal Mode is a 1G test at each sample point and is more accurate
-
 
 <input id='testButton' type='button' value='Run Disk Speed Test' onclick='test();' disabled>&nbsp;&nbsp;<span id='status'>Status: Refreshing...</span><br><br>
 <b>History:</b>  <select id='history' onchange='changeSource();'>
