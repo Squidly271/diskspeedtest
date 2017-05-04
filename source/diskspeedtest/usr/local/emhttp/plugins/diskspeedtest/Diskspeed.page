@@ -16,7 +16,7 @@ $descriptorspec = array(
 proc_open("/usr/local/emhttp/plugins/diskspeedtest/scripts/getVars.sh",$descriptorspec,$pipes);
 
 if ( is_file("/usr/local/emhttp/plugins/diskspeedtest/diskspeed.html") ) {
-  $date = date("Y-m-d h-i-sa");
+  $date = date("Y-m-d H-i-s");
   exec("mv /usr/local/emhttp/plugins/diskspeedtest/diskspeed.html ".escapeshellarg("/boot/config/plugins/diskspeedtest/history/$date.html"));
   $source = "/plugins/diskspeedtest/history/history/$date.html";
 }

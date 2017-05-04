@@ -2,8 +2,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "diskspeedtest">
 <!ENTITY author    "jbartlett/squid">
-<!ENTITY version   "2017.05.02">
-<!ENTITY md5       "af92618977085de83c831f295faed54f">
+<!ENTITY version   "2017.05.04">
+<!ENTITY md5       "7c183d007baca450ad668c77d84cc6e0">
 <!ENTITY launch    "Tools/Diskspeed">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
 <!ENTITY github    "Squidly271/diskspeedtest">
@@ -13,6 +13,10 @@
 <PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;">
 
 <CHANGES>
+###2017.05.04
+- Changed: History now stored in 24Hour format (for proper sorting)
+- Fixed: Extra info not displaying when using Dynamix with Black theme (fix going forward - previously generated charts won't display extra info)
+
 ###2017.05.02
 - Initial Release
 </CHANGES>

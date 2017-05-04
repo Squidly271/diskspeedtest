@@ -1077,7 +1077,7 @@ do
 	let CurrDiskID++
 done
 
-echo -e -n "]});});</script></head><body><style type=\042text/css\042>body,td {font-family:Arial,Helvetica,sans-serif;font-size:13px;color:black;}</style><script src=\042http://code.highcharts.com/highcharts.js\042></script><script src=\042http://code.highcharts.com/modules/exporting.js\042></script><div align=\042center\042><table border=0 cellpadding=0 cellspacing=0><tr><td><div id=\042graph1\042 style=\042min-width: 310px; width: 1000px; height: 400px; margin: 0 auto;" >> "$outputfile"
+echo -e -n "]});});</script></head><body><style type=\042text/css\042>body,td {font-family:Arial,Helvetica,sans-serif;font-size:13px;color:grey;}</style><script src=\042http://code.highcharts.com/highcharts.js\042></script><script src=\042http://code.highcharts.com/modules/exporting.js\042></script><div align=\042center\042><table border=0 cellpadding=0 cellspacing=0><tr><td><div id=\042graph1\042 style=\042min-width: 310px; width: 1000px; height: 400px; margin: 0 auto;" >> "$outputfile"
 if [[ $ShowGraph1 -eq 0 ]]; then
 	echo -n "display:none" >> "$outputfile"
 fi
