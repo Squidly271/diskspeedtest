@@ -891,8 +891,8 @@ if [[ $log -eq 1 ]]; then
 fi
 
 # Generate the report
-#echo -e -n "<!DOCTYPE html><html><head><meta http-equiv=\042content-type\042 content=\042text/html; charset=UTF-8\042><title>Disk Speed Test</title><script type=\042text/javascript\042 src=\042http://code.jquery.com/jquery-1.9.1.js\042></script><script type=\042text/javascript\042>" > "$outputfile"
-echo -e -n "<script type=\042text/javascript\042 src=\042http://code.jquery.com/jquery-1.9.1.js\042></script><script type=\042text/javascript\042>" > "$outputfile"
+#echo -e -n "<!DOCTYPE html><html><head><meta http-equiv=\042content-type\042 content=\042text/html; charset=UTF-8\042><title>Disk Speed Test</title><script type=\042text/javascript\042 src=\042https://code.jquery.com/jquery-1.9.1.js\042></script><script type=\042text/javascript\042>" > "$outputfile"
+echo -e -n "<script type=\042text/javascript\042 src=\042https://code.jquery.com/jquery-1.9.1.js\042></script><script type=\042text/javascript\042>" > "$outputfile"
 echo -e "\044(function () {\044('#graph1').highcharts({title:{text:'Disk Speed Test'},subtitle:{text:'By Position Percentile'},xAxis:{min:0,max:100,labels:{formatter:function\050\051{return this.value+'%';}}},yAxis:{min:0,title:{text:'Speed/Sec'}},tooltip:{formatter:function(){return this.series.name+': '+this.y/1000000+'MB/sec at '+this.x+'%';}},legend:{enabled:true},plotOptions:{series:{marker:{enabled:false},animation:false,connectNulls:true}},series: [" >> "$outputfile"
 
 # Generate graph lines for drives in the array
@@ -1077,7 +1077,7 @@ do
 	let CurrDiskID++
 done
 
-echo -e -n "]});});</script></head><body><style type=\042text/css\042>body,td {font-family:Arial,Helvetica,sans-serif;font-size:13px;color:grey;}</style><script src=\042http://code.highcharts.com/highcharts.js\042></script><script src=\042http://code.highcharts.com/modules/exporting.js\042></script><div align=\042center\042><table border=0 cellpadding=0 cellspacing=0><tr><td><div id=\042graph1\042 style=\042min-width: 310px; width: 1000px; height: 400px; margin: 0 auto;" >> "$outputfile"
+echo -e -n "]});});</script></head><body><style type=\042text/css\042>body,td {font-family:Arial,Helvetica,sans-serif;font-size:13px;color:grey;}</style><script src=\042https://code.highcharts.com/highcharts.js\042></script><script src=\042https://code.highcharts.com/modules/exporting.js\042></script><div align=\042center\042><table border=0 cellpadding=0 cellspacing=0><tr><td><div id=\042graph1\042 style=\042min-width: 310px; width: 1000px; height: 400px; margin: 0 auto;" >> "$outputfile"
 if [[ $ShowGraph1 -eq 0 ]]; then
 	echo -n "display:none" >> "$outputfile"
 fi
